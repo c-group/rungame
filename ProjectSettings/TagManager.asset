@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - PlayerDamege
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: yuhi
+    uniqueID: 3235151475
+    locked: 0
+  - name: home
+    uniqueID: 3235168025
+    locked: 0
+  - name: yama
+    uniqueID: 3833786343
+    locked: 0
+  - name: rock
+    uniqueID: 1513009483
+    locked: 0
+  - name: kirikabu
+    uniqueID: 2973514861
+    locked: 0
+  - name: player
+    uniqueID: 668224613
+    locked: 0
