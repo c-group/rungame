@@ -16,3 +16,4 @@ public class AudioPlayer : MonoBehaviour
         audioSource.Play();
     }
 }
+//bgm用
