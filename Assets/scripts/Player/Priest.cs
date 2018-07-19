@@ -133,3 +133,5 @@ public class Priest : MonoBehaviour
         gameObject.layer = 8;
     }
 }
+
+/* tesut */
