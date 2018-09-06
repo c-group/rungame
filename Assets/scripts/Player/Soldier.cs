@@ -130,6 +130,6 @@ public class Soldier : MonoBehaviour
             count--;
         }
         //レイヤーをPlayerに戻す
-        gameObject.layer = 8;
+        gameObject.layer = 11;
     }
 }
