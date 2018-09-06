@@ -27,7 +27,7 @@ public class Loading : MonoBehaviour
     IEnumerator LoadData()
     {
         // シーンの読み込みをする
-        async = SceneManager.LoadSceneAsync("Stage3");
+        async = SceneManager.LoadSceneAsync("Stage2");
 
         //　読み込みが終わるまで進捗状況をスライダーの値に反映させる
         while (!async.isDone)
