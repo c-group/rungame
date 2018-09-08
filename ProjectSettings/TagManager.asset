@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - enemy
   - Heart
+  - GameOver
   layers:
   - Default
   - TransparentFX
