@@ -8,9 +8,6 @@ public class Enemy : MonoBehaviour
     public float flap = 550f;
     public float scroll = -0.5f;
     public GameObject Player;
-    
-    
-
 
     Rigidbody2D rb2d;
     Animator anim;
@@ -27,9 +24,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         this.transform.position += new Vector3(scroll, 0, 0);
-        
+
         //プレイヤーと敵の距離
-        Vector3 playerpos =  Player.transform.position;
+        Vector3 playerpos = Player.transform.position;
         Vector3 enemypos = this.GetComponent<Transform>().position;
         float dis = Vector3.Distance(playerpos, enemypos);
         Debug.Log(dis);
@@ -41,14 +38,15 @@ public class Enemy : MonoBehaviour
         {
             anim.SetBool("Attack", false);
         }
-       
+
     }
 
+    //被ダメージ処理
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") == true && collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Attack")
         {
-            anim.SetBool("Damage", true);
+            anim.SetTrigger("Damage");
         }
     }
 
