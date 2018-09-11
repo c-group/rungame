@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 33487019035280546}
   - component: {fileID: 23891956019712192}
   - component: {fileID: 61612582813096100}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grand2 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}

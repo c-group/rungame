@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4706392746698802}
   - component: {fileID: 114558320271902776}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ground_randam
   m_TagString: Untagged
   m_Icon: {fileID: 0}

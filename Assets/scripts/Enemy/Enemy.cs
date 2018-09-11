@@ -47,25 +47,58 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Attack")
         {
-            anim.SetTrigger("Damage");
-            //プレイヤーの攻撃のオブジェクト，コンポーネントを取得
-            GameObject attack = GameObject.FindGameObjectWithTag("Attack");
-            Attack power = attack.GetComponent<Attack>();
+            StartCoroutine("Deth");
+        }
 
-            hp = hp - power.power;
-
-            if (hp <= 0)
-            {
-                StartCoroutine("Deth");
-            }
+        if (collision.gameObject.tag == "Ground")
+        {
+            rb2d.velocity = Vector2.zero; 
         }
     }
-
+    
     IEnumerator Deth()
     {
-        anim.SetBool("Down", true);
-        yield return new WaitForSeconds(1); 
-        Destroy(gameObject);
+        int count = 10;
+        anim.SetTrigger("Damage");
+        //プレイヤーの攻撃のオブジェクト，コンポーネントを取得
+        GameObject attack = GameObject.FindGameObjectWithTag("Attack");
+        Attack power = attack.GetComponent<Attack>();
+
+        hp = hp - power.power;
+        
+        if (hp <= 0)
+        {
+            anim.SetBool("Down", true);
+            
+            while (count > 0)
+            {
+                //透明にする
+                this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+                //0.05秒待つ
+                yield return new WaitForSeconds(0.05f);
+                //元に戻す
+                this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                //0.05秒待つ
+                yield return new WaitForSeconds(0.05f);
+                count--;
+            }
+            Destroy(gameObject);
+        }
+        else
+        {
+            while (count > 0)
+            {
+                //透明にする
+                this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+                //0.05秒待つ
+                yield return new WaitForSeconds(0.05f);
+                //元に戻す
+                this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                //0.05秒待つ
+                yield return new WaitForSeconds(0.05f);
+                count--;
+            }
+        }
 
     }
 }

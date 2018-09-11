@@ -217,8 +217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flap: 550
   scroll: -0.5
-  Player: {fileID: 1678782944511662, guid: 774c3296df31bf941b949acca15e276c, type: 2}
-  hp: 10
+  Player: {fileID: 0}
+  hp: 5
 --- !u!114 &114814176308103548
 MonoBehaviour:
   m_ObjectHideFlags: 1

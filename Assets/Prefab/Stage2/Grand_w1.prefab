@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 4154373238477388}
   - component: {fileID: 114513572668338224}
   - component: {fileID: 114530933578326652}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grand_w1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

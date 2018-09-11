@@ -229,7 +229,7 @@ MonoBehaviour:
   flap: 550
   scroll: -0.5
   Player: {fileID: 1678782944511662, guid: 774c3296df31bf941b949acca15e276c, type: 2}
-  hp: 1
+  hp: 10
 --- !u!212 &212891899089152378
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,7 +8,6 @@ public class Soldier : MonoBehaviour
     public float flap = 30f;
     public float flap2 = 30f;
     public float scroll = 4f;
-    public int hp = 3;
     Rigidbody2D rb2d;
     Animator anim;
     AnimatorStateInfo animatorStateInfo;
@@ -98,6 +97,7 @@ public class Soldier : MonoBehaviour
         anim.Update(0);
         animatorStateInfo = anim.GetCurrentAnimatorStateInfo(0);
 
+        //ジャンプカウント
         if (collision.gameObject.tag == "Ground")
         {
             jumpCount = 0;
@@ -107,7 +107,6 @@ public class Soldier : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             anim.SetTrigger("Damage");
-            hp--;
             StartCoroutine("Damage");
         }
 

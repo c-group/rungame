@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 33556882500471098}
   - component: {fileID: 23646419857707784}
   - component: {fileID: 61323965128720324}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grand2 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
