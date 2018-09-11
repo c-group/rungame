@@ -6,7 +6,7 @@ public class Ground : MonoBehaviour
 {
 
     // 変数の定義と初期化
-    public float scroll = -0.5f;
+    public float scroll = -0.8f;
 
 
     // Update is called once per frame

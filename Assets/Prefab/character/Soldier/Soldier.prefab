@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114564039436846484}
   - component: {fileID: 61928799773037932}
   - component: {fileID: 50544146344303398}
+  - component: {fileID: 114144239333853918}
   m_Layer: 8
   m_Name: Soldier
   m_TagString: Player
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678782944511662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: -33, y: -8.8, z: 2.9}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -107,6 +108,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114144239333853918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678782944511662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204942039a1faa14e905a979009c9ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifePrefab: {fileID: 1000011119317636, guid: 3f9a0120883074248adb627eb355713c, type: 2}
+  defaultLife: 3
 --- !u!114 &114564039436846484
 MonoBehaviour:
   m_ObjectHideFlags: 1
