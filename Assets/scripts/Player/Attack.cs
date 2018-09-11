@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoldierAttack : MonoBehaviour
+public class Attack : MonoBehaviour
 {
 
     public int speed = 10;
-    public float power = 30f;
+    public float r_fors = 30f;
+    public float u_fors = 30f;
+    public int power = 1;
 
     // ゲームオブジェクト生成から削除するまでの時間
     public float lifeTime = 1;
@@ -25,7 +27,8 @@ public class SoldierAttack : MonoBehaviour
         Rigidbody2D rigit = collision.gameObject.GetComponent<Rigidbody2D>();
         if (rigit)
         {
-            rigit.AddForce(transform.root.right * power, ForceMode2D.Impulse);
+            rigit.AddForce(transform.root.right * r_fors, ForceMode2D.Impulse);
+            rigit.AddForce(transform.root.up * u_fors, ForceMode2D.Impulse);
         }
     }
 }
