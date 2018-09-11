@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public float flap = 550f;
     public float scroll = -0.5f;
     public GameObject Player;
+    public int hp = 1;
 
     Rigidbody2D rb2d;
     Animator anim;
@@ -47,9 +48,24 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Attack")
         {
             anim.SetTrigger("Damage");
+            //プレイヤーの攻撃のオブジェクト，コンポーネントを取得
+            GameObject attack = GameObject.FindGameObjectWithTag("Attack");
+            Attack power = attack.GetComponent<Attack>();
+
+            hp = hp - power.power;
+
+            if (hp <= 0)
+            {
+                StartCoroutine("Deth");
+            }
         }
     }
 
+    IEnumerator Deth()
+    {
+        anim.SetBool("Down", true);
+        yield return new WaitForSeconds(1); 
+        Destroy(gameObject);
 
-
+    }
 }
