@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Soldier : MonoBehaviour
 {
-
+    public GameObject Prefab1;
+    public GameObject Prefab2;
     // 変数の定義と初期化
     public float flap = 30f;
     public float flap2 = 30f;
@@ -30,7 +31,7 @@ public class Soldier : MonoBehaviour
     {
 
         // スペースキーが押されたらジャンプ
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount == 0)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab1)
         {
             // 落下速度をリセット
             rb2d.velocity = Vector2.zero;
@@ -41,7 +42,7 @@ public class Soldier : MonoBehaviour
             anim.SetBool("Ground", false);
 
             //ジャンプ攻撃
-            if (Input.GetKeyDown(KeyCode.S) && anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true)
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab2 && anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true)
             {
                 anim.SetBool("Attack", true);
                 // 斬撃をプレイヤーと同じ位置/角度で作成
@@ -55,7 +56,7 @@ public class Soldier : MonoBehaviour
         }
 
         //2段ジャンプ
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true && Input.GetKeyDown(KeyCode.Space) && jumpCount == 1)
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab1 && jumpCount == 1)
         {
             // 落下速度をリセット
             rb2d.velocity = Vector2.zero;
@@ -66,7 +67,7 @@ public class Soldier : MonoBehaviour
             anim.SetBool("Ground", false);
 
             //ジャンプ攻撃
-            if (Input.GetKeyDown(KeyCode.S) && anim.GetCurrentAnimatorStateInfo(0).IsName("Jump2") == true)
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab2 && anim.GetCurrentAnimatorStateInfo(0).IsName("Jump2") == true)
             {
                 anim.SetBool("Attack", true);
                 // 斬撃をプレイヤーと同じ位置/角度で作成
@@ -79,7 +80,7 @@ public class Soldier : MonoBehaviour
         }
 
         //攻撃
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab2)
         {
             anim.SetBool("Attack", true);
             // 斬撃をプレイヤーと同じ位置/角度で作成
