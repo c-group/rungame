@@ -15,11 +15,16 @@ public class Playlife : MonoBehaviour {
         for (int i = 0; i < life; ++i)
         {
             
-            lifeList.Add((GameObject)Instantiate(lifePrefab, new Vector3(30f + i * 5f, 25f, 3f), Quaternion.identity));
+            lifeList.Add((GameObject)Instantiate(lifePrefab, new Vector3(-40f + i * 5f, 25f, 3f), Quaternion.identity));
         }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
+        if (col.gameObject.tag == "life")
+        {
+            ++life;
+            Instantiate(lifeList[life]);
+        }
         if (col.gameObject.tag=="Enemy")
         { 
             --life;
