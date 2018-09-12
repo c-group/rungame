@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public float scroll = -0.5f;
     public GameObject Player;
     public int hp = 1;
+    // スコアのポイント
+    public int point = 100;
 
     Rigidbody2D rb2d;
     Animator anim;
@@ -69,7 +71,8 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             anim.SetBool("Down", true);
-            
+            // スコアコンポーネントを取得してポイントを追加
+            FindObjectOfType<Score>().AddPoint(point);
             while (count > 0)
             {
                 //透明にする
