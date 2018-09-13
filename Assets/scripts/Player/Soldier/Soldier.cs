@@ -5,8 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Soldier : UIBehaviour
 {
-    public GameObject Prefab1;
-    public GameObject Prefab2;
+
     // 変数の定義と初期化
     public float flap = 30f;
     public float flap2 = 30f;
@@ -37,6 +36,7 @@ public class Soldier : UIBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             jumpCount = 0;
+            anim.SetBool("Jump", false);
         }
 
         //被ダメージ処理
@@ -48,71 +48,44 @@ public class Soldier : UIBehaviour
 
     }
 
-    public void onClickjump()
+    public void OnClickjump()
     {
-        
-        // 落下速度をリセット
-        rb2d.velocity = Vector2.zero;
-            // (0,1)方向に瞬間的に力を加えて跳ねさせる
-            rb2d.AddForce(Vector2.up * flap, ForceMode2D.Impulse);
-            jumpCount++;
-            anim.SetBool("Jump", true);
-            anim.SetBool("Ground", false);
         
         if(jumpCount == 0)
         {
-            anim.SetBool("Jump", false);
-            anim.SetBool("Ground", true);
+            anim.SetBool("Jump",true);
+            // 落下速度をリセット
+            rb2d.velocity = Vector2.zero;
+            // (0,1)方向に瞬間的に力を加えて跳ねさせる
+            rb2d.AddForce(Vector2.up * flap, ForceMode2D.Impulse);
+            jumpCount++;
+   
         }
+
 
         //2段ジャンプ
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") && jumpCount == 1)
         {
+            anim.SetBool("Jump", false);
+            anim.SetTrigger("Jump2");
             // 落下速度をリセット
             rb2d.velocity = Vector2.zero;
             // (0,1)方向に瞬間的に力を加えて跳ねさせる
             rb2d.AddForce(Vector2.up * flap2, ForceMode2D.Impulse);
             jumpCount++;
-            anim.SetBool("Jump2", true);
-            anim.SetBool("Ground", false);
-
-          
-        }
-        else
-        {
-            anim.SetBool("Jump2", false);
+    
         }
 
       
     }
-    public void onClickattack()
+    
+    //攻撃
+    public void OnClickattack()
     {
-        //攻撃
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            anim.SetBool("Attack", true);
+            anim.SetTrigger("Attack");
             // 斬撃をプレイヤーと同じ位置/角度で作成
             Instantiate(attack, transform.position, transform.rotation);
-        }
-        else
-        {
-            anim.SetBool("Attack", false);
-        }
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true)
-        {
-            anim.SetBool("Attack", true);
-            // 斬撃をプレイヤーと同じ位置/角度で作成
-            Instantiate(attack, transform.position, transform.rotation);
-        }
-        //ジャンプ攻撃
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump2") == true)
-        {
-            anim.SetBool("Attack", true);
-            // 斬撃をプレイヤーと同じ位置/角度で作成
-            Instantiate(attack, transform.position, transform.rotation);
-        }
-
-    }
+     }
 
    
 
@@ -137,18 +110,5 @@ public class Soldier : UIBehaviour
         //レイヤーをPlayerに戻す
         gameObject.layer = 8;
     }
-
-
-
-    // Startメソッドをコルーチンとして呼び出す
-    IEnumerator Attack()
-    {
-        while (true)
-        {
-            // 弾をプレイヤーと同じ位置/角度で作成
-            Instantiate(attack, transform.position, transform.rotation);
-        }
-    }
-
 
 }

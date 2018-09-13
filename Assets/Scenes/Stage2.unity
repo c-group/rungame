@@ -1256,7 +1256,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1810907174}
-        m_MethodName: onClickjump
+        m_MethodName: OnClickjump
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1377,7 +1377,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1810907174}
-        m_MethodName: onClickattack
+        m_MethodName: OnClickattack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1980,8 +1980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a83157656ddef438e76ddf19b8e981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab1: {fileID: 1828532668487426, guid: cafb533b27834804ca5dc1c2ed4f8d22, type: 2}
-  Prefab2: {fileID: 1021792471277324, guid: fea5a280c90979f43b4762814722ed9c, type: 2}
   flap: 38
   flap2: 30
   scroll: 4
