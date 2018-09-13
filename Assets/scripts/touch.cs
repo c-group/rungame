@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-
-public class touch : MonoBehaviour
+public class touch : UIBehaviour
 {
-    public GameObject lifePrefab;
-
-    // 変数の定義と初期化
     public float flap = 30f;
     public float flap2 = 30f;
     public float scroll = 4f;
@@ -25,12 +22,14 @@ public class touch : MonoBehaviour
         // Rigidbody2Dをキャッシュする
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
+        GetComponent<Button>().onClick.AddListener(onClick);
 
     }
-    // Update is called once per frame
-    void Update () {
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {  
+    void onClick()
+    {
+
+        // スペースキーが押されたらジャンプ
+        
             // 落下速度をリセット
             rb2d.velocity = Vector2.zero;
             // (0,1)方向に瞬間的に力を加えて跳ねさせる
@@ -38,6 +37,40 @@ public class touch : MonoBehaviour
             jumpCount++;
             anim.SetBool("Jump", true);
             anim.SetBool("Ground", false);
+
+           
+       
+
+        //2段ジャンプ
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true &&  jumpCount == 1)
+        {
+            // 落下速度をリセット
+            rb2d.velocity = Vector2.zero;
+            // (0,1)方向に瞬間的に力を加えて跳ねさせる
+            rb2d.AddForce(Vector2.up * flap2, ForceMode2D.Impulse);
+            jumpCount++;
+            anim.SetBool("Jump2", true);
+            anim.SetBool("Ground", false);
+
+           
         }
+        else
+        {
+            anim.SetBool("Jump2", false);
+        }
+
+       
+
+  
+
+
+
     }
 }
+    
+    
+    
+   
+      
+
+

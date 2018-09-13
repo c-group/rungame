@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class Soldier : MonoBehaviour
+public class Soldier : UIBehaviour
 {
     public GameObject Prefab1;
     public GameObject Prefab2;
@@ -23,75 +25,8 @@ public class Soldier : MonoBehaviour
         // Rigidbody2Dをキャッシュする
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
-
+        
     }
-
-    // シーン中にフレーム毎に呼ばれるメソッド
-    void Update()
-    {
-
-        // スペースキーが押されたらジャンプ
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab1)
-        {
-            // 落下速度をリセット
-            rb2d.velocity = Vector2.zero;
-            // (0,1)方向に瞬間的に力を加えて跳ねさせる
-            rb2d.AddForce(Vector2.up * flap, ForceMode2D.Impulse);
-            jumpCount++;
-            anim.SetBool("Jump", true);
-            anim.SetBool("Ground", false);
-
-            //ジャンプ攻撃
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab2 && anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true)
-            {
-                anim.SetBool("Attack", true);
-                // 斬撃をプレイヤーと同じ位置/角度で作成
-                Instantiate(attack, transform.position, transform.rotation);
-            }
-
-        }
-        else
-        {
-            anim.SetBool("Jump", false);
-        }
-
-        //2段ジャンプ
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab1 && jumpCount == 1)
-        {
-            // 落下速度をリセット
-            rb2d.velocity = Vector2.zero;
-            // (0,1)方向に瞬間的に力を加えて跳ねさせる
-            rb2d.AddForce(Vector2.up * flap2, ForceMode2D.Impulse);
-            jumpCount++;
-            anim.SetBool("Jump2", true);
-            anim.SetBool("Ground", false);
-
-            //ジャンプ攻撃
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab2 && anim.GetCurrentAnimatorStateInfo(0).IsName("Jump2") == true)
-            {
-                anim.SetBool("Attack", true);
-                // 斬撃をプレイヤーと同じ位置/角度で作成
-                Instantiate(attack, transform.position, transform.rotation);
-            }
-        }
-        else
-        {
-            anim.SetBool("Jump2", false);
-        }
-
-        //攻撃
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began == Prefab2)
-        {
-            anim.SetBool("Attack", true);
-            // 斬撃をプレイヤーと同じ位置/角度で作成
-            Instantiate(attack, transform.position, transform.rotation);
-        }
-        else
-        {
-            anim.SetBool("Attack", false);
-        }
-    }
-
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -112,6 +47,74 @@ public class Soldier : MonoBehaviour
         }
 
     }
+
+    public void onClickjump()
+    {
+        
+        // 落下速度をリセット
+        rb2d.velocity = Vector2.zero;
+            // (0,1)方向に瞬間的に力を加えて跳ねさせる
+            rb2d.AddForce(Vector2.up * flap, ForceMode2D.Impulse);
+            jumpCount++;
+            anim.SetBool("Jump", true);
+            anim.SetBool("Ground", false);
+        
+        if(jumpCount == 0)
+        {
+            anim.SetBool("Jump", false);
+            anim.SetBool("Ground", true);
+        }
+
+        //2段ジャンプ
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") && jumpCount == 1)
+        {
+            // 落下速度をリセット
+            rb2d.velocity = Vector2.zero;
+            // (0,1)方向に瞬間的に力を加えて跳ねさせる
+            rb2d.AddForce(Vector2.up * flap2, ForceMode2D.Impulse);
+            jumpCount++;
+            anim.SetBool("Jump2", true);
+            anim.SetBool("Ground", false);
+
+          
+        }
+        else
+        {
+            anim.SetBool("Jump2", false);
+        }
+
+      
+    }
+    public void onClickattack()
+    {
+        //攻撃
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            anim.SetBool("Attack", true);
+            // 斬撃をプレイヤーと同じ位置/角度で作成
+            Instantiate(attack, transform.position, transform.rotation);
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump") == true)
+        {
+            anim.SetBool("Attack", true);
+            // 斬撃をプレイヤーと同じ位置/角度で作成
+            Instantiate(attack, transform.position, transform.rotation);
+        }
+        //ジャンプ攻撃
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump2") == true)
+        {
+            anim.SetBool("Attack", true);
+            // 斬撃をプレイヤーと同じ位置/角度で作成
+            Instantiate(attack, transform.position, transform.rotation);
+        }
+
+    }
+
+   
 
     IEnumerator Damage()
     {
