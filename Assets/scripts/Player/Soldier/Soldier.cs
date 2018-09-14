@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Soldier : UIBehaviour
+public class Soldier : MonoBehaviour
 {
 
     // 変数の定義と初期化
@@ -14,9 +14,10 @@ public class Soldier : UIBehaviour
     Animator anim;
     AnimatorStateInfo animatorStateInfo;
     private new Renderer renderer;
-    int jumpCount = 0;
+    public static int jumpCount = 0;
     // SoldierAttackプレハブ
     public GameObject attack;
+    private AudioSource sound01;
 
     // Updateの前に1回だけ呼ばれるメソッド
     void Start()
@@ -24,7 +25,8 @@ public class Soldier : UIBehaviour
         // Rigidbody2Dをキャッシュする
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
-        
+        sound01 = GetComponent<AudioSource>();
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -91,6 +93,7 @@ public class Soldier : UIBehaviour
 
     IEnumerator Damage()
     {
+        sound01.PlayOneShot(sound01.clip);
         //レイヤーをPlayerDamageに変更
         gameObject.layer = 9;
         //while文を10回ループ
@@ -109,6 +112,11 @@ public class Soldier : UIBehaviour
         }
         //レイヤーをPlayerに戻す
         gameObject.layer = 8;
+    }
+
+    public static int GetJumpCount()
+    {
+        return jumpCount;
     }
 
 }

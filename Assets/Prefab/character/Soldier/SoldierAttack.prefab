@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4281333077467930}
   - component: {fileID: 50565164449305424}
   - component: {fileID: 114265998561655084}
-  - component: {fileID: 82325823628295056}
+  - component: {fileID: 82786429932981560}
   m_Layer: 11
   m_Name: SoldierAttack
   m_TagString: Attack
@@ -119,7 +119,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7378315, y: 1.57}
   m_EdgeRadius: 0
---- !u!82 &82325823628295056
+--- !u!82 &82786429932981560
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         Vector3 playerpos = Player.transform.position;
         Vector3 enemypos = this.GetComponent<Transform>().position;
         float dis = Vector3.Distance(playerpos, enemypos);
-        Debug.Log(dis);
+        //Debug.Log(dis);
         if (dis < 10)
         {
             anim.SetBool("Attack", true);
