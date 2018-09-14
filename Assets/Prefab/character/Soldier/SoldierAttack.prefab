@@ -244,9 +244,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  r_fors: 5
-  u_fors: 2
-  power: 1
+  r_fors: 3
+  u_fors: 1
+  power: 2
   lifeTime: 0.8
 --- !u!212 &212694651685132918
 SpriteRenderer:

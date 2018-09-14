@@ -838,7 +838,7 @@ Prefab:
     - target: {fileID: 114800628324861632, guid: cc0e4a3d4b289d3468b0c9ed8ce12808,
         type: 2}
       propertyPath: scroll
-      value: -1.5
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc0e4a3d4b289d3468b0c9ed8ce12808, type: 2}
@@ -951,7 +951,7 @@ Prefab:
     - target: {fileID: 114513572668338224, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
         type: 2}
       propertyPath: scroll
-      value: -1.5
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74ce43719b390ed4f98a87ac7e2ca78b, type: 2}
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae32578a16447d4ebbe9c0b33fc9626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scroll: -0.8
+  scroll: -1
 --- !u!212 &1065552367
 SpriteRenderer:
   m_ObjectHideFlags: 0
