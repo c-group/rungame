@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273bab0a7787cb84f84b5f7b68dab26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Soldier: {fileID: 0}
+  Soldier: {fileID: 1513095126345374, guid: 9bae4a28f0ee73740b74e653b2dbcd50, type: 2}
   wait: 0.5
 --- !u!114 &114136962564378498
 MonoBehaviour:
@@ -156,7 +156,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114564039436846484, guid: 774c3296df31bf941b949acca15e276c,
+          type: 2}
         m_MethodName: OnClickattack
         m_Mode: 1
         m_Arguments:
@@ -262,7 +263,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114564039436846484, guid: 774c3296df31bf941b949acca15e276c,
+          type: 2}
         m_MethodName: OnClickjump
         m_Mode: 1
         m_Arguments:
@@ -286,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c17adc87600cc499e376394ccd36b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Soldier: {fileID: 0}
+  Soldier: {fileID: 1513095126345374, guid: 9bae4a28f0ee73740b74e653b2dbcd50, type: 2}
   wait: 1
 --- !u!222 &222390455331744172
 CanvasRenderer:

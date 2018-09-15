@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -781,6 +781,54 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 659775030}
+--- !u!1001 &814600713
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4943970708325002, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 870.20667
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943970708325002, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2124.0085
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943970708325002, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 33.441895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943970708325002, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943970708325002, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943970708325002, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943970708325002, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4943970708325002, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c786f27fc9f6d4f449f102ffa04edd0f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &814600714 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114233814382663950, guid: c786f27fc9f6d4f449f102ffa04edd0f,
+    type: 2}
+  m_PrefabInternal: {fileID: 814600713}
+  m_Script: {fileID: 11500000, guid: 52ce62ec89480384fa3912538a2b6348, type: 3}
 --- !u!1 &1139791594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1121,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1167230972}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 814600714}
+        m_MethodName: SetReset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1167230972
