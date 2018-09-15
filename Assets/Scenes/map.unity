@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3130,7 +3130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 671, y: 190.99998}
+  m_AnchoredPosition: {x: 692, y: 190.99998}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059811965
@@ -3165,7 +3165,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u546A\u8853"
 --- !u!222 &1059811966
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3992,7 +3992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30A8\u30EB\u30B6\u30FB\u30C6\u30A3\u30A8\u30FC\u30EB"
+  m_Text: "\u30B7\u30AF\u30B9\u30B9"
 --- !u!222 &1376943055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5210,7 +5210,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u9B54\u6CD5"
 --- !u!222 &1910307728
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5883,7 +5883,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30A8\u30EB\u30B6\u30FB\u30C6\u30A3\u30A8\u30FC\u30EB"
+  m_Text: "\u30EA\u30E5\u30DF\u30A8\u30FC\u30EB"
 --- !u!222 &2116461132
 CanvasRenderer:
   m_ObjectHideFlags: 0
