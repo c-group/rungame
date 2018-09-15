@@ -29,6 +29,19 @@ public class Soldier : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnClickjump();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S) )
+        {
+            OnClickattack();
+        }
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         anim.Update(0);

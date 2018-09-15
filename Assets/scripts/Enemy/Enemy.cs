@@ -45,12 +45,16 @@ public class Enemy : MonoBehaviour
     }
 
     //被ダメージ処理
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Attack")
+    void OnCollisionEnter2D(Collision2D collision){
+        if(hp > 0)
         {
-            StartCoroutine("Deth");
+            if (collision.gameObject.tag == "Attack")
+            {
+                StartCoroutine("Deth");
+            }
+
         }
+        
 
         if (collision.gameObject.tag == "Ground")
         {
@@ -71,6 +75,7 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             anim.SetBool("Down", true);
+            gameObject.layer = 13;
             // スコアコンポーネントを取得してポイントを追加
             FindObjectOfType<Score>().AddPoint(point);
             while (count > 0)
