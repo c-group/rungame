@@ -14,25 +14,30 @@ public class PlayerSound : MonoBehaviour
     {
         anim = GetComponent("Animator") as Animator;
         audioSource = gameObject.AddComponent<AudioSource>();
+
+
     }
 
 
     public void JumpSound()
     {
-        int jumpcount = Soldier.GetJumpCount();
-        if (jumpcount == 1)
+        int s_jumpcount = Soldier.GetJumpCount();
+        int p_jumpcount = Priest.GetJumpCount();
+        int w_jumpcount = Wizard.GetJumpCount();
+
+        if (s_jumpcount == 1 || p_jumpcount == 1 || w_jumpcount == 1)
         {
             audioSource.PlayOneShot(audioClip[0]);
         }
 
-        if (jumpcount == 2)
+        if (s_jumpcount == 2 || p_jumpcount == 2 || w_jumpcount == 2)
         {
             audioSource.PlayOneShot(audioClip[1]);
         }
 
     }
 
-    public void S_AttackSound()
+    public void AttackSound()
     {
         audioSource.PlayOneShot(audioClip[2]);
         

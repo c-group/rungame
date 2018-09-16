@@ -17,7 +17,7 @@ public class Character_Creation : MonoBehaviour {
 
         if(SoldierFlag == 1)
         {
-        Instantiate(Soldier);        
+            Instantiate(Soldier);        
         }
         else if (PriestFlag == 1)
         {

@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class Wizard : MonoBehaviour {
+public class Priest : MonoBehaviour
+{
 
     // 変数の定義と初期化
     public float flap = 30f;

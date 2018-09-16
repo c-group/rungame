@@ -4,30 +4,23 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(Button))]
-public class Soldier_AttackButton : UIBehaviour
+
+public class JumpButton : UIBehaviour
 {
 
-    public GameObject Soldier;
-    public float wait = 0.5f;
-
+    public GameObject Player_Sound; 
+    public float wait = 1f;
     PlayerSound script;
+    
+
+    private int count = 0;
 
     protected override void Start()
     {
         base.Start();
-        script = Soldier.GetComponent<PlayerSound>();
-
-        // Buttonクリック時、OnClickメソッドを呼び出す
+        script = Player_Sound.GetComponent<PlayerSound>();
         GetComponent<Button>().onClick.AddListener(OnClick);
 
-
-    }
-
-    void OnClick()
-    {
-        script.S_AttackSound();
-        StartCoroutine("Push_wait");
     }
 
     IEnumerator Push_wait()
@@ -35,6 +28,21 @@ public class Soldier_AttackButton : UIBehaviour
         GetComponent<Button>().interactable = false;
         yield return new WaitForSeconds(wait); // とりあえず５秒
         GetComponent<Button>().interactable = true;
-       
+        count = 0;
+    }
+
+    void OnClick()
+    {
+        count++;
+        // Buttonクリック時、OnClickメソッドを呼び出す
+        if (count < 3)
+        {
+            script.JumpSound();
+        }
+        else
+        {
+            StartCoroutine("Push_wait");
+        }
+        
     }
 }
