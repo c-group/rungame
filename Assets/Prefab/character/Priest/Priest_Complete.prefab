@@ -478,7 +478,10 @@ MonoBehaviour:
   flap: 600
   flap2: 500
   scroll: 4
-  attack: {fileID: 1780533076077486, guid: 960cfa894d6b54f418ed1cfbb6a11ee4, type: 2}
+  attack: {fileID: 1220909706526978, guid: 75eca2bdce12e24499579e7565ff856f, type: 2}
+  _touch_flag: 0
+  _touch_position: {x: 0, y: 0}
+  _touch_phase: 0
 --- !u!114 &114705242212523776
 MonoBehaviour:
   m_ObjectHideFlags: 1

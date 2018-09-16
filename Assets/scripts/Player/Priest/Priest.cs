@@ -17,6 +17,11 @@ public class Priest : MonoBehaviour
     public GameObject attack;
     private AudioSource sound01;
 
+    public bool _touch_flag;      // タッチ有無
+    public Vector2 _touch_position;   // タッチ座標
+    public TouchPhase _touch_phase;   // タッチ状態
+
+
     // Updateの前に1回だけ呼ばれるメソッド
     void Start()
     {
@@ -97,7 +102,7 @@ public class Priest : MonoBehaviour
     {
         anim.SetTrigger("Attack");
         // 斬撃をプレイヤーと同じ位置/角度で作成
-        Instantiate(attack, transform.position, transform.rotation);
+        Instantiate(attack);
     }
 
 

@@ -51,10 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecec4982fce1db84b893c37ef95f7c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Soldier: {fileID: 1678782944511662, guid: 774c3296df31bf941b949acca15e276c, type: 2}
-  Soldier_Button: {fileID: 1786664644304714, guid: 9583925b338dc3e4b8b87a1a90469554,
-    type: 2}
-  Soldier_Sound: {fileID: 1513095126345374, guid: 9bae4a28f0ee73740b74e653b2dbcd50,
-    type: 2}
-  Priest: {fileID: 1222027220525318, guid: dfdea847390af9f408bdf27831ad53bc, type: 2}
+  Soldier: {fileID: 1026783452646524, guid: 3a69bcaa2a37d384faf67baf310e8905, type: 2}
+  Priest: {fileID: 1414804398128678, guid: 9e0bde4cce5afcc41b2889d21ddf729e, type: 2}
   Wizard: {fileID: 1165324695209140, guid: 1bca1f1e9f56f3249b5e6257983a4cc7, type: 2}
