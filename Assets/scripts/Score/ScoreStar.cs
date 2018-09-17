@@ -7,10 +7,10 @@ public class ScoreStar : MonoBehaviour {
 
     public int Lighiting_up_point = 0;
 
-	void Start () {
-        int result = Score.getScore();
-        
-        if(Lighiting_up_point <= result)
+	public void Lighitng_Up(int total) {
+        int score = total;
+       
+        if(Lighiting_up_point <= score)
         {
             this.GetComponent<Image>().color = new Color(1f, 1f, 0f, 1f);
         }
