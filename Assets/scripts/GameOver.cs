@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
-            SceneManager.LoadSceneAsync("Game Over");
+
+            FadeManager.Instance.LoadScene("Game Over", 1.5f);
         }
     }
 }

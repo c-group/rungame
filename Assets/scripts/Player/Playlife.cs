@@ -15,7 +15,7 @@ public class Playlife : MonoBehaviour {
         for (int i = 0; i < life; ++i)
         {
             
-            lifeList.Add((GameObject)Instantiate(lifePrefab, new Vector3(-40f + i * 5f, 25f, 3f), Quaternion.identity));
+            lifeList.Add((GameObject)Instantiate(lifePrefab, new Vector3(-40f + i * 5f, 20f, 3f), Quaternion.identity));
         }
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -33,7 +33,7 @@ public class Playlife : MonoBehaviour {
 
             if (life==0)
             {
-                SceneManager.LoadSceneAsync("Game Over");
+                FadeManager.Instance.LoadScene("Game Over", 1.5f);
             }
         }
     }
