@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4287743583070656}
   - component: {fileID: 212694651685132918}
   - component: {fileID: 95975485956652536}
-  - component: {fileID: 61571472121708896}
+  - component: {fileID: 60661073662077184}
   m_Layer: 11
   m_Name: zangeki
   m_TagString: Attack
@@ -94,8 +94,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61571472121708896
-BoxCollider2D:
+--- !u!60 &60661073662077184
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -106,7 +106,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.28341764, y: -0.42909145}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -116,9 +116,11 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9173099, y: 4.6865716}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.002290845, y: 0.7594437}
+      - {x: -0.8101342, y: -2.4704335}
+      - {x: 1.1779399, y: -2.4285188}
 --- !u!82 &82786429932981560
 AudioSource:
   m_ObjectHideFlags: 1
@@ -244,8 +246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  r_fors: 150
-  u_fors: 80
+  r_fors: 40
+  u_fors: 50
   power: 2
   lifeTime: 0.8
 --- !u!212 &212694651685132918

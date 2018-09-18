@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 61715001073901114}
   - component: {fileID: 50502299240450414}
   - component: {fileID: 114454696972218364}
-  - component: {fileID: 82309108311809692}
   - component: {fileID: 114729248327603928}
   m_Layer: 8
   m_Name: Priest
@@ -207,101 +206,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75062037, y: 1.7528296}
   m_EdgeRadius: 0
---- !u!82 &82309108311809692
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1172139157015460}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b67af207ee6df9a439470178b766815b, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!95 &95741493909629308
 Animator:
   serializedVersion: 3
@@ -479,6 +383,7 @@ MonoBehaviour:
   flap2: 500
   scroll: 4
   attack: {fileID: 1220909706526978, guid: 75eca2bdce12e24499579e7565ff856f, type: 2}
+  Player_Sound: {fileID: 1704461086301582}
   _touch_flag: 0
   _touch_position: {x: 0, y: 0}
   _touch_phase: 0
@@ -518,6 +423,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aefa80a7e4437584e86bb78bb495acf2, type: 3}
   - {fileID: 8300000, guid: 1676dc7053af7e441aee741c365d4b1a, type: 3}
   - {fileID: 8300000, guid: 9b106a69a0a278043a745bbc24d1de33, type: 3}
+  - {fileID: 8300000, guid: b67af207ee6df9a439470178b766815b, type: 3}
+  - {fileID: 8300000, guid: c4e71a2c7140dbb4fae0ae21ff93ccd8, type: 3}
 --- !u!114 &114729248327603928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -531,6 +438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifePrefab: {fileID: 1000011119317636, guid: 3f9a0120883074248adb627eb355713c, type: 2}
   defaultLife: 3
+  Player_Sound: {fileID: 1704461086301582}
 --- !u!114 &114826206295516918
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 public class Playlife : MonoBehaviour {
     public GameObject lifePrefab;
     public int defaultLife = 3;
-    private int life;
+    private static int life;
     private List<GameObject> lifeList = new List<GameObject>();
     private Vector3 pos;
+    public GameObject Player_Sound;
+    PlayerSound script;
+    
+
     void Start()
     {
+        script = Player_Sound.GetComponent<PlayerSound>();
         life = defaultLife;
         for (int i = 0; i < life; ++i)
         {
@@ -33,8 +38,14 @@ public class Playlife : MonoBehaviour {
 
             if (life==0)
             {
+                script.DethSound();
                 FadeManager.Instance.LoadScene("Game Over", 1.5f);
             }
         }
+    }
+
+    public static int  getLife()
+    {
+        return life;
     }
  }

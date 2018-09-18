@@ -19,7 +19,7 @@ public class mapbutton : UIBehaviour
 
     void OnClick()
     {
-        FadeManager.Instance.LoadScene("map", 2.0f);
+        FadeManager.Instance.LoadScene("map", 1.0f);
 
     }
 }

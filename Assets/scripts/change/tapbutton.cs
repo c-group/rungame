@@ -19,7 +19,7 @@ public class tapbutton : UIBehaviour
 
     void OnClick()
     {
-        FadeManager.Instance.LoadScene("menu", 2.0f);
+        FadeManager.Instance.LoadScene("menu", 1.0f);
 
     }
 }

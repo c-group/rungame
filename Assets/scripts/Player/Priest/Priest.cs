@@ -15,7 +15,8 @@ public class Priest : MonoBehaviour
     public static int jumpCount = 0;
     // SoldierAttackプレハブ
     public GameObject attack;
-    private AudioSource sound01;
+    public GameObject Player_Sound;
+    PlayerSound script;
 
     public bool _touch_flag;      // タッチ有無
     public Vector2 _touch_position;   // タッチ座標
@@ -28,7 +29,7 @@ public class Priest : MonoBehaviour
         // Rigidbody2Dをキャッシュする
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
-        sound01 = GetComponent<AudioSource>();
+        script = Player_Sound.GetComponent<PlayerSound>();
 
     }
 
@@ -45,7 +46,7 @@ public class Priest : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         anim.Update(0);
         animatorStateInfo = anim.GetCurrentAnimatorStateInfo(0);
@@ -109,7 +110,7 @@ public class Priest : MonoBehaviour
 
     IEnumerator Damage()
     {
-        sound01.PlayOneShot(sound01.clip);
+        script.DamageSound();
         //レイヤーをPlayerDamageに変更
         gameObject.layer = 9;
         //while文を10回ループ

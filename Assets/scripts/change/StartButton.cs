@@ -19,7 +19,7 @@ public class StartButton : UIBehaviour
 
         void OnClick()
     {
-        FadeManager.Instance.LoadScene("Story", 2.0f);
+        FadeManager.Instance.LoadScene("Story", 1.0f);
        
     }
 }

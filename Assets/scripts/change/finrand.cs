@@ -19,7 +19,7 @@ public class finrand : UIBehaviour
 
     void OnClick()
     {
-        FadeManager.Instance.LoadScene("Stage3", 2.0f);
+        FadeManager.Instance.LoadScene("Stage3", 1.0f);
 
     }
 }

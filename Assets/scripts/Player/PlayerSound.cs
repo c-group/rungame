@@ -39,7 +39,16 @@ public class PlayerSound : MonoBehaviour
 
     public void AttackSound()
     {
-        audioSource.PlayOneShot(audioClip[2]);
-        
+        audioSource.PlayOneShot(audioClip[2]);        
+    }
+
+    public void DamageSound()
+    {
+        audioSource.PlayOneShot(audioClip[3]);
+    }
+
+    public void DethSound()
+    {
+        audioSource.PlayOneShot(audioClip[4]);
     }
 }

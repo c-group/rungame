@@ -16,8 +16,9 @@ public class Soldier : MonoBehaviour
     private new Renderer renderer;
     public static int jumpCount = 0;
     // SoldierAttackプレハブ
-    public GameObject attack;
-    private AudioSource sound01;
+    public GameObject attack;    
+    public GameObject Player_Sound;
+    PlayerSound script;
 
     // Updateの前に1回だけ呼ばれるメソッド
     void Start()
@@ -25,7 +26,8 @@ public class Soldier : MonoBehaviour
         // Rigidbody2Dをキャッシュする
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
-        sound01 = GetComponent<AudioSource>();
+        
+        script = Player_Sound.GetComponent<PlayerSound>();
 
     }
 
@@ -42,7 +44,7 @@ public class Soldier : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         anim.Update(0);
         animatorStateInfo = anim.GetCurrentAnimatorStateInfo(0);
@@ -106,7 +108,7 @@ public class Soldier : MonoBehaviour
 
     IEnumerator Damage()
     {
-        sound01.PlayOneShot(sound01.clip);
+        script.DamageSound();
         //レイヤーをPlayerDamageに変更
         gameObject.layer = 9;
         //while文を10回ループ
