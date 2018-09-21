@@ -7,13 +7,19 @@ public class Score : MonoBehaviour
     public Text scoreText;
 
     // ハイスコアを表示するText
-   // public Text highScoreText;
+    // public Text highScoreText;
+
+    //星テキスト
+    public Text starText;
 
     // スコア
     public static int score;
 
     // ハイスコア
-   // public static int highScore;
+    // public static int highScore;
+
+    //星数
+    private int star = 0;
 
     // PlayerPrefsで保存するためのキー
    // public string highScoreKey = "highScore";
@@ -34,6 +40,7 @@ public class Score : MonoBehaviour
         // スコア・ハイスコアを表示する
         scoreText.text = score.ToString();
         //highScoreText.text = "HighScore : " + highScore.ToString();
+        starText.text = "×" + star.ToString();
     }
 
     // ゲーム開始前の状態に戻す
@@ -50,6 +57,11 @@ public class Score : MonoBehaviour
     public void AddPoint(int point)
     {
         score = score + point;
+    }
+
+    public void AddStar()
+    {
+        star++;
     }
 
     // ハイスコアの保存

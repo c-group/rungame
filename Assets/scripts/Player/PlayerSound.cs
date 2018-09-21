@@ -56,4 +56,9 @@ public class PlayerSound : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClip[5]);
     }
+
+    public void HealSound()
+    {
+        audioSource.PlayOneShot(audioClip[6]);
+    }
 }

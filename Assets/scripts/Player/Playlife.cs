@@ -27,8 +27,11 @@ public class Playlife : MonoBehaviour {
     {
         if (col.gameObject.tag == "life")
         {
+            script.HealSound();
             ++life;
-            Instantiate(lifeList[life]);
+            int position = life - 1;
+           // Instantiate(lifeList[life]);
+            lifeList.Add((GameObject)Instantiate(lifePrefab, new Vector3(-40f + position * 5f, 20f, 3f), Quaternion.identity));
         }
         if (col.gameObject.tag=="Enemy")
         { 
@@ -42,6 +45,8 @@ public class Playlife : MonoBehaviour {
                 FadeManager.Instance.LoadScene("Game Over", 1.5f);
             }
         }
+
+        Debug.Log(life);
     }
 
     public static int  getLife()

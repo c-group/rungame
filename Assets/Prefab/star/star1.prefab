@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae32578a16447d4ebbe9c0b33fc9626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scroll: -0.8
+  scroll: -1
 --- !u!114 &114766437714211286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,7 +210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flap_u: 450
   flap_r: 100
-  audioClip: {fileID: 8300000, guid: 11c69f5fa8e2b6448a95a0c11e9bad91, type: 3}
 --- !u!212 &212496136916229782
 SpriteRenderer:
   m_ObjectHideFlags: 1

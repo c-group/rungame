@@ -7,8 +7,8 @@ public class ScoreStar : MonoBehaviour {
 
     public int Lighiting_up_point = 0;
 
-	public void Lighitng_Up(int total) {
-        int score = total;
+	void Start() {
+        int score = Score_Counter.GetTotal();
        
         if(Lighiting_up_point <= score)
         {

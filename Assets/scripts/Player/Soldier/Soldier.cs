@@ -66,6 +66,7 @@ public class Soldier : MonoBehaviour
         if (collision.gameObject.tag == "Star")
         {
             script.StarSound();
+            FindObjectOfType<Score>().AddStar();
         }
 
     }

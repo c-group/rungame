@@ -17,7 +17,7 @@ public class Priest : MonoBehaviour
     public GameObject attack;
     public GameObject Player_Sound;
     PlayerSound script;
-
+    
     public bool _touch_flag;      // タッチ有無
     public Vector2 _touch_position;   // タッチ座標
     public TouchPhase _touch_phase;   // タッチ状態
@@ -68,6 +68,7 @@ public class Priest : MonoBehaviour
         if (collision.gameObject.tag == "Star")
         {
             script.StarSound();
+            FindObjectOfType<Score>().AddStar();
         }
 
     }
@@ -140,5 +141,6 @@ public class Priest : MonoBehaviour
     {
         return jumpCount;
     }
+
 
 }
