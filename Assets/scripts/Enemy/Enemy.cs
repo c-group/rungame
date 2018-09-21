@@ -7,13 +7,14 @@ public class Enemy : MonoBehaviour
     // 変数の定義と初期化
     public float flap = 550f;
     public float scroll = -0.5f;
-    public GameObject Player;
     public int hp = 1;
     // スコアのポイント
     public int point = 100;
 
     Rigidbody2D rb2d;
     Animator anim;
+    public GameObject[] star;
+    GameObject player; 
 
     // Updateの前に1回だけ呼ばれるメソッド
     void Start()
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
         // Rigidbody2Dをキャッシュする
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // シーン中にフレーム毎に呼ばれるメソッド
@@ -29,7 +31,7 @@ public class Enemy : MonoBehaviour
         this.transform.position += new Vector3(scroll, 0, 0);
 
         //プレイヤーと敵の距離
-        Vector3 playerpos = Player.transform.position;
+        Vector3 playerpos = player.transform.position;
         Vector3 enemypos = this.GetComponent<Transform>().position;
         float dis = Vector3.Distance(playerpos, enemypos);
         //Debug.Log(dis);
@@ -64,7 +66,7 @@ public class Enemy : MonoBehaviour
     
     IEnumerator Deth()
     {
-        int count = 10;
+        int count = 5;
         anim.SetTrigger("Damage");
         //プレイヤーの攻撃のオブジェクト，コンポーネントを取得
         GameObject attack = GameObject.FindGameObjectWithTag("Attack");
@@ -75,6 +77,8 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             anim.SetBool("Down", true);
+            int number = Random.Range(0, star.Length);
+            Instantiate(star[number], transform.position, transform.rotation);
             gameObject.layer = 13;
             // スコアコンポーネントを取得してポイントを追加
             FindObjectOfType<Score>().AddPoint(point);

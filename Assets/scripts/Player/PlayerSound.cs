@@ -51,4 +51,9 @@ public class PlayerSound : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClip[4]);
     }
+
+    public void StarSound()
+    {
+        audioSource.PlayOneShot(audioClip[5]);
+    }
 }

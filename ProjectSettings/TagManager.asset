@@ -9,6 +9,7 @@ TagManager:
   - GameOver
   - Attack
   - life
+  - Star
   layers:
   - Default
   - TransparentFX
@@ -19,13 +20,13 @@ TagManager:
   - 
   - 
   - Player
-  - PlayerDamege
+  - PlayerDamage
   - Enemy
   - Attack
   - Ground
   - EnemyDeth
   - S_Attack
-  - 
+  - Star
   - 
   - 
   - 

@@ -63,6 +63,11 @@ public class Soldier : MonoBehaviour
             StartCoroutine("Damage");
         }
 
+        if (collision.gameObject.tag == "Star")
+        {
+            script.StarSound();
+        }
+
     }
 
     public void OnClickjump()

@@ -65,6 +65,11 @@ public class Priest : MonoBehaviour
             StartCoroutine("Damage");
         }
 
+        if (collision.gameObject.tag == "Star")
+        {
+            script.StarSound();
+        }
+
     }
 
     public void OnClickjump()
