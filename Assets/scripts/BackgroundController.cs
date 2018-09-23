@@ -3,10 +3,13 @@ using System.Collections;
 
 public class BackgroundController : MonoBehaviour
 {
-    void Update()
+    public float speed = 0f;
+
+    void FixedUpdate()
     {
-        float scroll = Mathf.Repeat(Time.time * 0.02f, 1);
+        float scroll = Mathf.Repeat(Time.time * speed, 1);
         Vector2 offset = new Vector2(scroll, 0);
         GetComponent<Renderer>().sharedMaterial.SetTextureOffset("_MainTex", offset);
     }
+
 }

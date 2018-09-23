@@ -10,8 +10,9 @@ public class Ground : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         this.transform.position += new Vector3(scroll, 0, 0);
     }
+
 }

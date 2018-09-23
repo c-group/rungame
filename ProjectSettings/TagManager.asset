@@ -10,6 +10,7 @@ TagManager:
   - Attack
   - life
   - Star
+  - Hiougi
   layers:
   - Default
   - TransparentFX
