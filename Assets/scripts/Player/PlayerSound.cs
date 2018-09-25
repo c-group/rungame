@@ -61,4 +61,9 @@ public class PlayerSound : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClip[6]);
     }
+
+    public void HiougiSound()
+    {
+        audioSource.PlayOneShot(audioClip[7]);
+    }
 }

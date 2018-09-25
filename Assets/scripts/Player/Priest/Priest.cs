@@ -136,8 +136,10 @@ public class Priest : MonoBehaviour
     public void OnClickHiougi()
     {
         PausManager.OnClickPaus();
-        anim.SetTrigger("Attack");
-        Instantiate(hiougi);       
+        anim.SetBool("Hiougi",true);
+        Instantiate(hiougi);
+        script.HiougiSound();
+       // anim.SetBool("Hiougi", false);
     }
 
 }
