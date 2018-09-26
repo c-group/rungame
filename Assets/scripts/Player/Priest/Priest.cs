@@ -9,7 +9,7 @@ public class Priest : MonoBehaviour
     public float flap2 = 30f;
     public float wait = 4f;
     Rigidbody2D rb2d;
-    Animator anim;
+    static Animator anim;
     AnimatorStateInfo animatorStateInfo;
     private new Renderer renderer;
     public static int jumpCount = 0;
@@ -139,7 +139,16 @@ public class Priest : MonoBehaviour
         anim.SetBool("Hiougi",true);
         Instantiate(hiougi);
         script.HiougiSound();
-       // anim.SetBool("Hiougi", false);
+    }
+
+    public static void Redy()
+    {
+        anim.SetBool("Hiougi", false);
+    }
+
+    public void H_Attack()
+    {
+        script.HiougiSound2();
     }
 
 }

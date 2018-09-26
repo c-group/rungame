@@ -28,8 +28,12 @@ public class Hiougi : MonoBehaviour {
                 Instantiate(ikazuti);
                 Destroy(gameObject, lifeTime);
             }
-        }
-        
+        }        
+    }
+
+    private void Redy()
+    {
+        Priest.Redy();
     }
 
 }
