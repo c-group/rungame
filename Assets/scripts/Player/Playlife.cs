@@ -25,14 +25,19 @@ public class Playlife : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "life")
+        if (col.gameObject.tag == "life" && life < 3)
         {
             script.HealSound();
             ++life;
             int position = life - 1;
-           // Instantiate(lifeList[life]);
             lifeList.Add((GameObject)Instantiate(lifePrefab, new Vector3(-40f + position * 5f, 20f, 3f), Quaternion.identity));
         }
+        else if(col.gameObject.tag == "life")
+        {
+            script.HealSound();
+            FindObjectOfType<Score>().AddPoint(300);
+        }
+
         if (col.gameObject.tag=="Enemy")
         { 
             --life;
@@ -45,8 +50,6 @@ public class Playlife : MonoBehaviour {
                 FadeManager.Instance.LoadScene("Game Over", 1.5f);
             }
         }
-
-        Debug.Log(life);
     }
 
     public static int  getLife()

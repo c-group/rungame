@@ -14,8 +14,6 @@ public class PlayerSound : MonoBehaviour
     {
         anim = GetComponent("Animator") as Animator;
         audioSource = gameObject.AddComponent<AudioSource>();
-
-
     }
 
 
@@ -34,7 +32,6 @@ public class PlayerSound : MonoBehaviour
         {
             audioSource.PlayOneShot(audioClip[1]);
         }
-
     }
 
     public void AttackSound()
