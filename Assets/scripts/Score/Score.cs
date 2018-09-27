@@ -19,7 +19,7 @@ public class Score : MonoBehaviour
     // public static int highScore;
 
     //星数
-    private int star = 0;
+    public static int star = 0;
 
     // PlayerPrefsで保存するためのキー
    // public string highScoreKey = "highScore";
@@ -78,5 +78,15 @@ public class Score : MonoBehaviour
     public static int getScore()
     {
         return score;
+    }
+
+    public static int getStar()
+    {
+        return star;
+    }
+
+    public static void setStar()
+    {
+        star -= 20;
     }
 }

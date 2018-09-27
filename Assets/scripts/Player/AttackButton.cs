@@ -20,8 +20,6 @@ public class AttackButton : UIBehaviour
 
         // Buttonクリック時、OnClickメソッドを呼び出す
         GetComponent<Button>().onClick.AddListener(OnClick);
-
-
     }
 
     void OnClick()
@@ -34,7 +32,6 @@ public class AttackButton : UIBehaviour
     {
         GetComponent<Button>().interactable = false;
         yield return new WaitForSeconds(wait); // とりあえず５秒
-        GetComponent<Button>().interactable = true;
-       
+        GetComponent<Button>().interactable = true;       
     }
 }

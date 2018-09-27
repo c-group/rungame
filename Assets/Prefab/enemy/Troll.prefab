@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flap: 550
-  scroll: -1
+  scroll: -0.6
   hp: 10
   point: 100
   star:
