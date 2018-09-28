@@ -16,6 +16,7 @@ public class GameOver : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            FindObjectOfType<Score>().Save();
             int life = Playlife.getLife();
             if (life <= 0)
             {

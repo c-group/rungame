@@ -19,7 +19,7 @@ public class Stage2 : UIBehaviour
 
     void OnClick()
     {
-        FadeManager.Instance.LoadScene("Stage2", 1.0f);
+        FadeManager.Instance.LoadScene("アリベオン山地", 1.0f);
 
     }
 }

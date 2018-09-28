@@ -1,45 +1,70 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
     // スコアを表示するText
     public Text scoreText;
 
-    // ハイスコアを表示するText
-    // public Text highScoreText;
-
     //星テキスト
     public Text starText;
 
     // スコア
     public static int score;
+    private int rankin_score;
+    int applay = 0;
 
-    // ハイスコア
-    // public static int highScore;
+    //ステージ情報
+    private string stagename;
+
+    //キャラ情報
+    int chara;
 
     //星数
     public static int star = 0;
 
     // PlayerPrefsで保存するためのキー
-   // public string highScoreKey = "highScore";
+    public string CharaKey = "Chara";
+    public string ScoreKey = "Score";
+    public string StageKey = "Stage";
+
+
    
     void Start()
     {
+        stagename = SceneManager.GetActiveScene().name;
+        int SoldierFlag = Character_Flag.GetS_Flag();
+        int PriestFlag = Character_Flag.GetP_Flag();
+        int WizardFlag = Character_Flag.GetW_Flag();
+
+        if (SoldierFlag == 1)
+        {
+            chara = 0;
+        }
+        else if (PriestFlag == 1)
+        {
+            chara = 1;
+        }
+        else if (WizardFlag == 1)
+        {
+            chara = 2;
+        }
+
         Initialize();
     }
 
     void Update()
     {
-        // スコアがハイスコアより大きければ
-        //if (highScore < score)
-        //{
-          //  highScore = score;
-        //}
+       if(score > Score_Ranking.getMin_Score())
+        {
+            rankin_score = score;
+            applay = 1;
+        }
 
         // スコア・ハイスコアを表示する
         scoreText.text = score.ToString();
-        //highScoreText.text = "HighScore : " + highScore.ToString();
         starText.text = "×" + star.ToString();
     }
 
@@ -48,9 +73,7 @@ public class Score : MonoBehaviour
     {
         // スコアを0に戻す
         score = 0;
-
-        // ハイスコアを取得する。保存されてなければ0を取得する。
-       // highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+        star = 0;
     }
 
     // ポイントの追加
@@ -64,15 +87,16 @@ public class Score : MonoBehaviour
         star++;
     }
 
-    // ハイスコアの保存
+
     public void Save()
     {
-        // ハイスコアを保存する
-       // PlayerPrefs.SetInt(highScoreKey, highScore);
-        //PlayerPrefs.Save();
+        if (applay > 1)
+        {
+            Score_Ranking.set_Score(chara, rankin_score, stagename);
+            applay = 0;
+        }
+        //FindObjectOfType<Score_Ranking>().Save();
 
-        // ゲーム開始前の状態に戻す
-        Initialize();
     }
 
     public static int getScore()
