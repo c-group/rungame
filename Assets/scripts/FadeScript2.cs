@@ -13,7 +13,7 @@ public class FadeScript2 : MonoBehaviour
     public void MoveUp()
     {
 
-        iTween.MoveTo(gameObject, iTween.Hash("y", 480, "time", 1.5));
+        iTween.MoveTo(gameObject, iTween.Hash("y", 440, "time", 1.5));
     }
     public void MoveDown()
     {
