@@ -5847,9 +5847,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 751462832}
   starText: {fileID: 834755408}
-  CharaKey: Chara
-  ScoreKey: Score
-  StageKey: Stage
 --- !u!1 &1301084931
 GameObject:
   m_ObjectHideFlags: 0
@@ -6984,6 +6981,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1222d9bc0f7804d97bb5218213252e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1565647276
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4832345760865946, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832345760865946, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832345760865946, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832345760865946, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832345760865946, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832345760865946, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832345760865946, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832345760865946, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1567310794
 GameObject:
   m_ObjectHideFlags: 0
@@ -8661,6 +8700,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1974451937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1974451939}
+  - component: {fileID: 1974451938}
+  m_Layer: 0
+  m_Name: HiScore_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1974451938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974451937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad22bae4d03fd1147b99db4eaf130ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1974451939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974451937}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 123, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974592199
 GameObject:
   m_ObjectHideFlags: 0

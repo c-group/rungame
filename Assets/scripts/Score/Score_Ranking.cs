@@ -7,9 +7,17 @@ public class Score_Ranking : MonoBehaviour {
 
     public List<Text> scoretext = new List<Text>();
     public List<Text> stagetext = new List<Text>();
+    public List<Image> charaimage = new List<Image>();
     static List<ScoreRank> sr = new List<ScoreRank>();
 
+    int[] scoreArray;
+    int[] charaArray;
+    string[] stageArray
+        ;
 
+    public Sprite Asprite;
+    public Sprite Bsprite;
+    public Sprite Csprite;
 
     public struct ScoreRank
     {
@@ -26,17 +34,15 @@ public class Score_Ranking : MonoBehaviour {
     }
 
     void Start () {
-        
-        sr.Add(new ScoreRank(1, 10, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 100, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 210, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 1, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 110, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 103, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 1022, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 510, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 510, "アリベオン山地"));
-        sr.Add(new ScoreRank(1, 130, "アリベオン山地"));
+
+        scoreArray = PlayerPrefsX.GetIntArray("score");
+        charaArray = PlayerPrefsX.GetIntArray("chara");
+        stageArray = PlayerPrefsX.GetStringArray("stage");
+
+        for (int i = 0; i < 10; i++)
+        {
+            sr.Add(new ScoreRank(charaArray[i], scoreArray[i], stageArray[i]));
+        }
 
         sr.Sort((a, b) => b.score.CompareTo(a.score));
 
@@ -44,27 +50,23 @@ public class Score_Ranking : MonoBehaviour {
         {
             scoretext[i].text = sr[i].score.ToString();
             stagetext[i].text = sr[i].stage;
+            // フラグによってそれに合った画像に差し替える
+            if (sr[i].chara == 0)
+            {
+                charaimage[i].sprite = Asprite;
+            }
+            else if (sr[i].chara == 1)
+            {
+                charaimage[i].sprite = Bsprite;
+            }
+            else if (sr[i].chara == 2)
+            {
+                charaimage[i].sprite = Csprite;
+            }
         }
+
+        sr.Clear();
         
-    }
-	
-
-    public static int getMin_Score()
-    {
-        //sr.Sort((a, b) => b.score.CompareTo(a.score));
-        return 10; 
-            //sr[9].score;
-    }
-
-    public static void set_Score(int a, int b, string c)
-    {
-        sr.RemoveAt(9);
-        sr.Add(new ScoreRank(a, b, c));
-    }
-
-    public void Save()
-    {
-
     }
 
 }

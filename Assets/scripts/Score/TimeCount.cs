@@ -24,12 +24,12 @@ public class TimeCount : MonoBehaviour
         second = (int)time;//秒.timeを60で割った余り.
         string secText;//テキスト形式の分・秒を用意.
      
-      
-     
-            secText = second.ToString();
+        secText = second.ToString();
 
         text.text =  secText+"m";
+        
     }
+
 
     public static int getDis_Score()
     {

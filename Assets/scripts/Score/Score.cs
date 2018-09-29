@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 public class Score : MonoBehaviour
 {
@@ -13,56 +13,17 @@ public class Score : MonoBehaviour
 
     // スコア
     public static int score;
-    private int rankin_score;
-    int applay = 0;
-
-    //ステージ情報
-    private string stagename;
-
-    //キャラ情報
-    int chara;
-
+ 
     //星数
     public static int star = 0;
-
-    // PlayerPrefsで保存するためのキー
-    public string CharaKey = "Chara";
-    public string ScoreKey = "Score";
-    public string StageKey = "Stage";
-
-
    
     void Start()
     {
-        stagename = SceneManager.GetActiveScene().name;
-        int SoldierFlag = Character_Flag.GetS_Flag();
-        int PriestFlag = Character_Flag.GetP_Flag();
-        int WizardFlag = Character_Flag.GetW_Flag();
-
-        if (SoldierFlag == 1)
-        {
-            chara = 0;
-        }
-        else if (PriestFlag == 1)
-        {
-            chara = 1;
-        }
-        else if (WizardFlag == 1)
-        {
-            chara = 2;
-        }
-
         Initialize();
     }
 
     void Update()
     {
-       if(score > Score_Ranking.getMin_Score())
-        {
-            rankin_score = score;
-            applay = 1;
-        }
-
         // スコア・ハイスコアを表示する
         scoreText.text = score.ToString();
         starText.text = "×" + star.ToString();
@@ -85,18 +46,6 @@ public class Score : MonoBehaviour
     public void AddStar()
     {
         star++;
-    }
-
-
-    public void Save()
-    {
-        if (applay > 1)
-        {
-            Score_Ranking.set_Score(chara, rankin_score, stagename);
-            applay = 0;
-        }
-        //FindObjectOfType<Score_Ranking>().Save();
-
     }
 
     public static int getScore()

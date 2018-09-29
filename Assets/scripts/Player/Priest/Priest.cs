@@ -18,6 +18,7 @@ public class Priest : MonoBehaviour
     public GameObject hiougi;
     public GameObject Player_Sound;
     PlayerSound script;
+    private int life;
 
     // Updateの前に1回だけ呼ばれるメソッド
     void Start()
@@ -45,6 +46,8 @@ public class Priest : MonoBehaviour
         {
             OnClickHiougi();
         }
+
+        life = Playlife.getLife();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -125,7 +128,10 @@ public class Priest : MonoBehaviour
             count--;
         }
         //レイヤーをPlayerに戻す
-        gameObject.layer = 8;
+        if (life > 0)
+        {
+            gameObject.layer = 8;
+        }
     }
 
     public static int GetJumpCount()

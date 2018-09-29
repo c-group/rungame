@@ -298,8 +298,8 @@ RectTransform:
   - {fileID: 1483646955}
   - {fileID: 1907301097}
   - {fileID: 204209579}
-  - {fileID: 1758586917}
   - {fileID: 640590639}
+  - {fileID: 1758586917}
   - {fileID: 2111528608}
   - {fileID: 33167609}
   m_Father: {fileID: 0}
@@ -887,7 +887,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 545edd72e307d3c4fb43113730add1dd,
+      objectReference: {fileID: 21300006, guid: 545edd72e307d3c4fb43113730add1dd,
         type: 3}
     - target: {fileID: 114863441449276484, guid: 1bd9358e2fd899b4b8bc02c0239376cc,
         type: 2}
@@ -1676,7 +1676,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f82b662e060ea6e4abf3f649bcc5b9d4, type: 3}
+  m_Sprite: {fileID: 21300014, guid: 3664c7cd1795551448e0e9b2fbfda54e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1725,7 +1725,7 @@ RectTransform:
   - {fileID: 635337750}
   - {fileID: 1396933779}
   m_Father: {fileID: 72835867}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3868,7 +3868,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300012, guid: 121b4c7f7226a9843a37a1601c6d3b7c,
+      objectReference: {fileID: 21300006, guid: f82b662e060ea6e4abf3f649bcc5b9d4,
         type: 3}
     - target: {fileID: 114863441449276484, guid: 1bd9358e2fd899b4b8bc02c0239376cc,
         type: 2}
@@ -4289,7 +4289,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6d0de8829b011004aab536100f009a66,
+      objectReference: {fileID: 21300006, guid: 6d0de8829b011004aab536100f009a66,
         type: 3}
     - target: {fileID: 224916857772486042, guid: 1bd9358e2fd899b4b8bc02c0239376cc,
         type: 2}
@@ -4483,7 +4483,7 @@ RectTransform:
   - {fileID: 1010689356}
   - {fileID: 1946375789}
   m_Father: {fileID: 72835867}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
