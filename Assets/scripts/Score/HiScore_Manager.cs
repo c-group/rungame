@@ -36,10 +36,21 @@ public class HiScore_Manager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        stagename = SceneManager.GetActiveScene().name;
+        
         int SoldierFlag = Character_Flag.GetS_Flag();
         int PriestFlag = Character_Flag.GetP_Flag();
         int WizardFlag = Character_Flag.GetW_Flag();
+
+        int AlibeonFlag = Stage_Flag.GetAlibeon();
+        int FilandFlag = Stage_Flag.GetFiland();
+        int RobelFlag = Stage_Flag.GetRobel();
+        int LeebleFlag = Stage_Flag.GetLeeble();
+        int VareruFlag = Stage_Flag.GetVareru();
+
+        if(AlibeonFlag == 1)
+        {
+            stagename = "アリベオン山地";
+        }
 
         if (SoldierFlag == 1)
         {
@@ -76,10 +87,10 @@ public class HiScore_Manager : MonoBehaviour {
     public void Save()
     {
         
-        if (Score_Counter.GetTotal() > scoreArray[9])
+        if (Result.getTotal() > scoreArray[9])
         {
             charaArray[9] = chara;
-            scoreArray[9] = Score_Counter.GetTotal();
+            scoreArray[9] = Result.getTotal();
             stageArray[9] = stagename;
         }
         Debug.Log(charaArray[9]);

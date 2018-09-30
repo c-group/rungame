@@ -16,19 +16,14 @@ public class GameOver : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            FindObjectOfType<HiScore_Manager>().Save();
+            
             int life = Playlife.getLife();
-            if (life <= 0)
+            if (life > 0)
             {
-                FadeManager.Instance.LoadScene("Game Over", 1.5f);
+                FadeManager.Instance.LoadScene("Game Over", 1f);
+                //FindObjectOfType<HiScore_Manager>().Save();
+                sound01.PlayOneShot(sound01.clip);                
             }
-            else
-            {
-                sound01.PlayOneShot(sound01.clip);
-                FadeManager.Instance.LoadScene("Game Over", 1.5f);
-
-            }
-           
         }
     }
 }

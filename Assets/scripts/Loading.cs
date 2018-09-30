@@ -15,10 +15,13 @@ public class Loading : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
-    public void NextScene()
+    public void Alibeon()
     {
         //　ロード画面UIをアクティブにする
         loadUI.SetActive(true);
+        
+        // シーンの読み込みをする
+        async = SceneManager.LoadSceneAsync("アリベオン山地"); 
 
         //　コルーチンを開始
         StartCoroutine("LoadData");
@@ -26,8 +29,7 @@ public class Loading : MonoBehaviour
 
     IEnumerator LoadData()
     {
-        // シーンの読み込みをする
-        async = SceneManager.LoadSceneAsync("アリベオン山地");
+              
 
         //　読み込みが終わるまで進捗状況をスライダーの値に反映させる
         while (!async.isDone)
