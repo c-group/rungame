@@ -24,15 +24,21 @@ EditorBuildSettings:
     path: Assets/Scenes/scoreranking.unity
     guid: c876db59355f4164a8a510e8ebb7cf3d
   - enabled: 1
-    path: Assets/Scenes/Stage.unity
+    path: "Assets/Scenes/\u30EC\u30A8\u30D6\u30EB\u7802\u6F20.unity"
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Stage3.unity
+    path: "Assets/Scenes/\u30D5\u30A3\u30E9\u30F3\u30C9\u57CE.unity"
     guid: d6cfd52934e89b644a70ad8888c041ca
   - enabled: 1
-    path: "Assets/Scenes/\u30A2\u30EA\u30D9\u30AA\u30F3\u5C71\u5730.unity"
+    path: "Assets/Scenes/\u30A2\u30EA\u30D9\u30AA\u30F3\u5C71\u8108.unity"
     guid: 76c0144868976104989ba30c551a864e
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 59f8265176143be44a1628fdc42ca08e
+  - enabled: 1
+    path: "Assets/Scenes/\u30ED\u30D9\u30EB\u57CE.unity"
+    guid: d86ddaf4b6237b248ab32d543e751932
+  - enabled: 1
+    path: "Assets/Scenes/\u30F4\u30A1\u30FC\u30EB\u5CF6.unity"
+    guid: a6f08607fec44dd40ba626ff11897408
   m_configObjects: {}

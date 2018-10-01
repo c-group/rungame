@@ -49,7 +49,23 @@ public class HiScore_Manager : MonoBehaviour {
 
         if(AlibeonFlag == 1)
         {
-            stagename = "アリベオン山地";
+            stagename = "アリベオン山脈";
+        }
+        else if (FilandFlag == 1)
+        {
+            stagename = "フィランド城";
+        }
+        else if (RobelFlag == 1)
+        {
+            stagename = "ロベル城";
+        }
+        else if (LeebleFlag == 1)
+        {
+            stagename = "レエブル砂漠";
+        }
+        else if (VareruFlag == 1)
+        {
+            stagename = "ヴァール島";
         }
 
         if (SoldierFlag == 1)

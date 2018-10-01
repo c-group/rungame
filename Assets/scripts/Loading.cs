@@ -21,7 +21,55 @@ public class Loading : MonoBehaviour
         loadUI.SetActive(true);
         
         // シーンの読み込みをする
-        async = SceneManager.LoadSceneAsync("アリベオン山地"); 
+        async = SceneManager.LoadSceneAsync("アリベオン山脈"); 
+
+        //　コルーチンを開始
+        StartCoroutine("LoadData");
+    }
+
+    public void Filand()
+    {
+        //　ロード画面UIをアクティブにする
+        loadUI.SetActive(true);
+
+        // シーンの読み込みをする
+        async = SceneManager.LoadSceneAsync("フィランド城");
+
+        //　コルーチンを開始
+        StartCoroutine("LoadData");
+    }
+
+    public void Robel()
+    {
+        //　ロード画面UIをアクティブにする
+        loadUI.SetActive(true);
+
+        // シーンの読み込みをする
+        async = SceneManager.LoadSceneAsync("ロベル城");
+
+        //　コルーチンを開始
+        StartCoroutine("LoadData");
+    }
+
+    public void Leeble()
+    {
+        //　ロード画面UIをアクティブにする
+        loadUI.SetActive(true);
+
+        // シーンの読み込みをする
+        async = SceneManager.LoadSceneAsync("レエブル砂漠");
+
+        //　コルーチンを開始
+        StartCoroutine("LoadData");
+    }
+
+    public void Vareru()
+    {
+        //　ロード画面UIをアクティブにする
+        loadUI.SetActive(true);
+
+        // シーンの読み込みをする
+        async = SceneManager.LoadSceneAsync("ヴァール島");
 
         //　コルーチンを開始
         StartCoroutine("LoadData");
@@ -29,8 +77,6 @@ public class Loading : MonoBehaviour
 
     IEnumerator LoadData()
     {
-              
-
         //　読み込みが終わるまで進捗状況をスライダーの値に反映させる
         while (!async.isDone)
         {
