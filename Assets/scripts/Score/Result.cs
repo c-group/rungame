@@ -20,9 +20,9 @@ public class Result : MonoBehaviour {
         int distance = TimeCount.getDis_Score();
         int distancepoint = TimeCount.getDis_Score() * 5;
         total = score + distancepoint;
-        resultText.text = "撃破ポイント:" + score.ToString();
-        distanceText.text = "踏破ポイント:" + distance.ToString() + "m  " + distancepoint.ToString();
-        totalscoreText.text = "合計:" + total.ToString();
+        resultText.text = score.ToString();
+        distanceText.text = distance.ToString() +  distancepoint.ToString();
+        totalscoreText.text = total.ToString();
         FindObjectOfType<HiScore_Manager>().Save();
 
     }
