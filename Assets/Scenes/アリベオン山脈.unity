@@ -5371,7 +5371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heart: {fileID: 1673039343960270, guid: 9d4c1185993921a458feacf0fedde157, type: 2}
-  timeOut: 10
+  timeOut: 30
 --- !u!4 &1204484607
 Transform:
   m_ObjectHideFlags: 0

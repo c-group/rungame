@@ -21,7 +21,7 @@ public class Result : MonoBehaviour {
         int distancepoint = TimeCount.getDis_Score() * 5;
         total = score + distancepoint;
         resultText.text = score.ToString();
-        distanceText.text = distance.ToString() +  distancepoint.ToString();
+        distanceText.text = distancepoint.ToString();
         totalscoreText.text = total.ToString();
         FindObjectOfType<HiScore_Manager>().Save();
 
