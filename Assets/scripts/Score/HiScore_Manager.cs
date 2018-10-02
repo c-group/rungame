@@ -7,6 +7,8 @@ public class HiScore_Manager : MonoBehaviour {
 
     int[] scoreArray = new int[10];
     int[] charaArray = new int[10];
+    int[] starArray = new int[10];
+    int[] rankArray = new int[10];
     string[] stageArray = new string[10];
 
     static List<ScoreRank> sr = new List<ScoreRank>();
@@ -25,18 +27,22 @@ public class HiScore_Manager : MonoBehaviour {
         public int chara;
         public int score;
         public string stage;
+        public int star;
+        public int rank;
 
-        public ScoreRank(int chara, int score, string stage)
+        public ScoreRank(int chara, int score, string stage, int star, int rank)
         {
             this.chara = chara;
             this.score = score;
             this.stage = stage;
+            this.star = star;
+            this.rank = rank;
         }
     }
 
     // Use this for initialization
     void Start () {
-        
+
         int SoldierFlag = Character_Flag.GetS_Flag();
         int PriestFlag = Character_Flag.GetP_Flag();
         int WizardFlag = Character_Flag.GetW_Flag();
@@ -84,10 +90,12 @@ public class HiScore_Manager : MonoBehaviour {
         scoreArray = PlayerPrefsX.GetIntArray("score", 0, 10);
         charaArray = PlayerPrefsX.GetIntArray("chara", 0, 10);
         stageArray = PlayerPrefsX.GetStringArray("stage", "nul", 10);
+        scoreArray = PlayerPrefsX.GetIntArray("star", 0,10);
+        rankArray = PlayerPrefsX.GetIntArray("rank", 0, 10);
 
         for (int i = 0; i < 10; i++)
         {
-            sr.Add(new ScoreRank( charaArray[i],scoreArray[i], stageArray[i]));
+            sr.Add(new ScoreRank( charaArray[i],scoreArray[i], stageArray[i],starArray[i],rankArray[i]));
         }
         sr.Sort((a, b) => b.score.CompareTo(a.score));
 
@@ -96,6 +104,8 @@ public class HiScore_Manager : MonoBehaviour {
             charaArray[s] = sr[s].chara;
             scoreArray[s] = sr[s].score;
             stageArray[s] = sr[s].stage;
+            starArray[s] = sr[s].star;
+            rankArray[s] = sr[s].rank;
         }
         sr.Clear();
     }
@@ -108,13 +118,35 @@ public class HiScore_Manager : MonoBehaviour {
             charaArray[9] = chara;
             scoreArray[9] = Result.getTotal();
             stageArray[9] = stagename;
+            starArray[9] = Score.getStar();
+            
+            if(Result.getTotal() < 5000)
+            {
+                rankArray[9] = 0;
+            }
+            else if (Result.getTotal() < 10000)
+            {
+                rankArray[9] = 1;
+            }
+            else if (Result.getTotal() < 15000)
+            {
+                rankArray[9] = 2;
+            }
+            else if (Result.getTotal() < 15000)
+            {
+                rankArray[9] = 3;
+            }
         }
         Debug.Log(charaArray[9]);
         Debug.Log(scoreArray[9]);
         Debug.Log(stageArray[9]);
+        Debug.Log(starArray[9]);
+        Debug.Log(rankArray[9]);
 
         PlayerPrefsX.SetIntArray("score", scoreArray);
         PlayerPrefsX.SetIntArray("chara", charaArray);
         PlayerPrefsX.SetStringArray("stage", stageArray);
+        PlayerPrefsX.SetIntArray("star", starArray);
+        PlayerPrefsX.SetIntArray("rank", rankArray);
     }
 }

@@ -21,7 +21,6 @@ public class GameOver : MonoBehaviour
             if (life > 0)
             {
                 FadeManager.Instance.LoadScene("Game Over", 1f);
-                //FindObjectOfType<HiScore_Manager>().Save();
                 sound01.PlayOneShot(sound01.clip);                
             }
         }

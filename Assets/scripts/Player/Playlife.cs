@@ -47,7 +47,6 @@ public class Playlife : MonoBehaviour {
             if (life==0)
             {
                 script.DethSound();
-               // FindObjectOfType<HiScore_Manager>().Save();
                 FadeManager.Instance.LoadScene("Game Over", 1.0f);
             }
         }
