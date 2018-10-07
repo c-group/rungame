@@ -270,7 +270,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: df7927a9c209fdf48ba89a4502f7d335, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -606,7 +606,6 @@ MonoBehaviour:
   flap2: 500
   wait: 4
   attack: {fileID: 1780533076077486, guid: 960cfa894d6b54f418ed1cfbb6a11ee4, type: 2}
-  hiougi: {fileID: 0}
   Player_Sound: {fileID: 1816316488567006}
 --- !u!114 &114573370666061180
 MonoBehaviour:
@@ -692,6 +691,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c4e71a2c7140dbb4fae0ae21ff93ccd8, type: 3}
   - {fileID: 8300000, guid: 11c69f5fa8e2b6448a95a0c11e9bad91, type: 3}
   - {fileID: 8300000, guid: b3506c63c0937fe4cad1b3774c5f4cc4, type: 3}
+  - {fileID: 8300000, guid: 7ab0a71247e8d214e96be25c5befc518, type: 3}
 --- !u!212 &212098761830258128
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -726,7 +726,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d4d2cd4acd5c68341b7d9b6605365c8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
