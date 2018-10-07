@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hiougi : MonoBehaviour {
+public class Mahouzin : MonoBehaviour {
 
     public float lifeTime = 1;
     public GameObject ikazuti;

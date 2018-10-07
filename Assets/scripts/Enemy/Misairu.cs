@@ -16,8 +16,9 @@ public class Misairu : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Attack")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Attack" || collision.gameObject.tag == "Hiougi")
         {
+            gameObject.layer = 13;
             anim.SetTrigger("bakuhatu");
             audioSource.Play();
         }

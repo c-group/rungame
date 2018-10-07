@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ikazuti : MonoBehaviour {
+public class Hiougi : MonoBehaviour {
 
     Animator anim;
     AnimatorStateInfo animatorStateInfo;
 
+    public bool ikazuti;
+    public bool rengeki;
+
     // Use this for initialization
     void Start () {
-        PausManager.OnClickReStart();
+        if (ikazuti) {
+            PausManager.OnClickReStart();
+        }        
         anim = GetComponent("Animator") as Animator;
         anim.Update(0);
         animatorStateInfo = anim.GetCurrentAnimatorStateInfo(0);
@@ -19,8 +24,21 @@ public class Ikazuti : MonoBehaviour {
 	void Update () {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("End"))
         {
-            Destroy(gameObject);
+            if (ikazuti)
+            {
+                Destroy(gameObject);
+            }
+            else if(rengeki){
+                PausManager.OnClickReStart();
+                Destroy(gameObject,1);
+            }
+            
         }
 
+    }
+
+    void FadeIn()
+    {
+        FindObjectOfType<FadeController>().Set_In();
     }
 }

@@ -91,6 +91,7 @@ public class Priest : MonoBehaviour
         //2段ジャンプ
         if ((anim.GetCurrentAnimatorStateInfo(0).IsName("Run") || anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") || anim.GetCurrentAnimatorStateInfo(0).IsName("Jump")) && jumpCount == 1)
         {
+            anim.SetBool("Jump", false);
             anim.SetTrigger("Jump2");
             // 落下速度をリセット
             rb2d.velocity = Vector2.zero;
