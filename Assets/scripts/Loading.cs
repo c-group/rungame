@@ -15,6 +15,30 @@ public class Loading : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
+    public void Retrie()
+    {
+        if (Stage_Flag.GetAlibeon() == 1)
+        {
+            Alibeon();
+        }
+        else if (Stage_Flag.GetFiland() == 1)
+        {
+            Filand();
+        }
+        else if (Stage_Flag.GetRobel() == 1)
+        {
+            Robel();
+        }
+        else if (Stage_Flag.GetLeeble() == 1)
+        {
+            Leeble();
+        }
+        else if (Stage_Flag.GetVareru() == 1)
+        {
+            Vareru();
+        }
+    }
+
     public void Alibeon()
     {
         //　ロード画面UIをアクティブにする

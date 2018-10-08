@@ -42,47 +42,37 @@ public class HiScore_Manager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
-        int SoldierFlag = Character_Flag.GetS_Flag();
-        int PriestFlag = Character_Flag.GetP_Flag();
-        int WizardFlag = Character_Flag.GetW_Flag();
-
-        int AlibeonFlag = Stage_Flag.GetAlibeon();
-        int FilandFlag = Stage_Flag.GetFiland();
-        int RobelFlag = Stage_Flag.GetRobel();
-        int LeebleFlag = Stage_Flag.GetLeeble();
-        int VareruFlag = Stage_Flag.GetVareru();
-
-        if(AlibeonFlag == 1)
+        
+        if(Stage_Flag.GetAlibeon() == 1)
         {
             stagename = "アリベオン山脈";
         }
-        else if (FilandFlag == 1)
+        else if (Stage_Flag.GetFiland() == 1)
         {
             stagename = "フィランド城";
         }
-        else if (RobelFlag == 1)
+        else if (Stage_Flag.GetRobel() == 1)
         {
             stagename = "ロベル城";
         }
-        else if (LeebleFlag == 1)
+        else if (Stage_Flag.GetLeeble() == 1)
         {
             stagename = "レエブル砂漠";
         }
-        else if (VareruFlag == 1)
+        else if (Stage_Flag.GetVareru() == 1)
         {
             stagename = "ヴァール島";
         }
 
-        if (SoldierFlag == 1)
+        if (Character_Flag.GetS_Flag() == 1)
         {
             chara = 0;
         }
-        else if (PriestFlag == 1)
+        else if (Character_Flag.GetP_Flag() == 1)
         {
             chara = 1;
         }
-        else if (WizardFlag == 1)
+        else if (Character_Flag.GetW_Flag() == 1)
         {
             chara = 2;
         }

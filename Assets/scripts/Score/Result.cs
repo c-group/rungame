@@ -11,6 +11,18 @@ public class Result : MonoBehaviour {
     public Text distanceText;
     public Text totalscoreText;
 
+    public Image chara;
+    public Image rankimage;
+
+    public Sprite Soldier;
+    public Sprite Priest;
+    public Sprite Wizard;
+
+    public Sprite S;
+    public Sprite A;
+    public Sprite B;
+    public Sprite C;
+
     static int total;
 
     // Use this for initialization
@@ -24,6 +36,36 @@ public class Result : MonoBehaviour {
         distanceText.text = distancepoint.ToString();
         totalscoreText.text = total.ToString();
         FindObjectOfType<HiScore_Manager>().Save();
+
+        if (Character_Flag.GetS_Flag() == 1)
+        {
+            chara.sprite = Soldier;
+        }
+        else if (Character_Flag.GetP_Flag() == 1)
+        {
+            chara.sprite = Priest;
+        }
+        else if (Character_Flag.GetW_Flag() == 1)
+        {
+            chara.sprite =Wizard;
+        }        
+
+        if(total < 5000)
+        {
+            rankimage.sprite = C;
+        }
+        else if(total < 10000)
+        {
+            rankimage.sprite = B;
+        }
+        else if (total < 15000)
+        {
+            rankimage.sprite = A;
+        }
+        else
+        {
+            rankimage.sprite = S;
+        }
 
     }
 
