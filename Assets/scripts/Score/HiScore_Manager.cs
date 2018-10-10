@@ -42,8 +42,8 @@ public class HiScore_Manager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
-        if(Stage_Flag.GetAlibeon() == 1)
+
+        if (Stage_Flag.GetAlibeon() == 1)
         {
             stagename = "アリベオン山脈";
         }

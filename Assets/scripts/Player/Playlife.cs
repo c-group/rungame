@@ -52,7 +52,7 @@ public class Playlife : MonoBehaviour {
         }
     }
 
-    public static int  getLife()
+    public int  getLife()
     {
         return life;
     }

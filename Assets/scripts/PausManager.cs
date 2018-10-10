@@ -17,12 +17,12 @@ public class PausManager : MonoBehaviour {
         }
     }
 
-    public static void OnClickPaus()
+    public void OnClickPaus()
     {
         Time.timeScale = 0;
     }
 
-    public static void OnClickReStart()
+    public void OnClickReStart()
     {
         Time.timeScale = 1;
     }

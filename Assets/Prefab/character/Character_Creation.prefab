@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1059483931924492}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1059483931924492
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4259746994427966}
   - component: {fileID: 114110352607776862}
@@ -30,7 +30,7 @@ GameObject:
 --- !u!4 &4259746994427966
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1059483931924492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -43,7 +43,7 @@ Transform:
 --- !u!114 &114110352607776862
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1059483931924492}
   m_Enabled: 1
@@ -53,4 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Soldier: {fileID: 1026783452646524, guid: 3a69bcaa2a37d384faf67baf310e8905, type: 2}
   Priest: {fileID: 1414804398128678, guid: 9e0bde4cce5afcc41b2889d21ddf729e, type: 2}
-  Wizard: {fileID: 1165324695209140, guid: 1bca1f1e9f56f3249b5e6257983a4cc7, type: 2}
+  Wizard: {fileID: 1236915139483736, guid: 852c54e5fa52a16499a4b3a2d0b402c1, type: 2}

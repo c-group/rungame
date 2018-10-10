@@ -52,7 +52,13 @@ public class Score_Ranking : MonoBehaviour {
         stageArray = PlayerPrefsX.GetStringArray("stage");
         starArray = PlayerPrefsX.GetIntArray("star");
         rankArray = PlayerPrefsX.GetIntArray("rank");
-        
+
+        Debug.Log(charaArray[9]);
+        Debug.Log(scoreArray[9]);
+        Debug.Log(stageArray[9]);
+        Debug.Log(starArray[9]);
+        Debug.Log(rankArray[9]);
+
         for (int i = 0; i < 10; i++)
         {
             sr.Add(new ScoreRank(charaArray[i], scoreArray[i], stageArray[i], starArray[i], rankArray[i]));

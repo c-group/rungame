@@ -17,7 +17,7 @@ public class GameOver : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             
-            int life = Playlife.getLife();
+            int life = FindObjectOfType<Playlife>().getLife();
             if (life > 0)
             {
                 FadeManager.Instance.LoadScene("Game Over", 1f);

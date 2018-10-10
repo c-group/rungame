@@ -15,7 +15,6 @@ public class Soldier : MonoBehaviour
     AnimatorStateInfo animatorStateInfo;
     private new Renderer renderer;
     public static int jumpCount = 0;
-    // SoldierAttackプレハブ
     public GameObject attack;
     public GameObject Player_Sound;
     PlayerSound script;
@@ -28,27 +27,27 @@ public class Soldier : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
         script = Player_Sound.GetComponent<PlayerSound>();
-
     }
 
     private void Update()
     {
+        //スペースキーでジャンプ処理へ
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnClickjump();
         }
-
+        //Sキーで攻撃処理へ
         if (Input.GetKeyDown(KeyCode.S))
         {
             OnClickattack();
         }
-
+        //Aキーで必殺技処理へ
         if (Input.GetKeyDown(KeyCode.A))
         {
             OnClickHiougi();
         }
-
-        life = Playlife.getLife();
+        //残りライフ数の取得
+        life = FindObjectOfType<Playlife>().getLife();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -63,13 +62,13 @@ public class Soldier : MonoBehaviour
             anim.SetBool("Jump", false);
         }
 
-        //被ダメージ処理
+        //被ダメージ処理へ
         if (collision.gameObject.tag == "Enemy")
         {
             anim.SetTrigger("Damage");
             StartCoroutine("Damage");
         }
-
+        //星取得
         if (collision.gameObject.tag == "Star")
         {
             script.StarSound();
@@ -77,6 +76,7 @@ public class Soldier : MonoBehaviour
         }
     }
 
+    //ジャンプ処理
     public void OnClickjump()
     {
         if (jumpCount == 0)
@@ -102,7 +102,7 @@ public class Soldier : MonoBehaviour
         }
     }
 
-    //攻撃
+    //攻撃処理
     public void OnClickattack()
     {
         anim.SetTrigger("Attack");
@@ -110,6 +110,7 @@ public class Soldier : MonoBehaviour
         Instantiate(attack, transform.position, transform.rotation);
     }
 
+    //被ダメージ処理
     IEnumerator Damage()
     {
         script.DamageSound();
@@ -136,29 +137,34 @@ public class Soldier : MonoBehaviour
         }
     }
 
+    //ジャンプカウントを返すゲッター
     public static int GetJumpCount()
     {
         return jumpCount;
     }
 
+    //アニメーターのジャンプステートをfalseにする
     void Jump_false()
     {
         anim.SetBool("Jump", false);
     }
 
+    //必殺技処理
     public void OnClickHiougi()
     {
-        PausManager.OnClickPaus();
+        FindObjectOfType<PausManager>().OnClickPaus();
         anim.SetBool("Hiougi", true);
         script.HiougiSound();
         FindObjectOfType<FadeController>().Set_Out();
     }
 
+    //アニメーターのHiougiステートをfalseにする
     public static void Redy()
     {
         anim.SetBool("Hiougi", false);
     }
 
+    //秘奥義ボイス
     public void H_Attack()
     {
         script.HiougiSound2();
