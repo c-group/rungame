@@ -11,7 +11,7 @@ public class FadeController : MonoBehaviour
 
     public bool isFadeOut = false;  //フェードアウト処理の開始、完了を管理するフラグ
     public bool isFadeIn = false;   //フェードイン処理の開始、完了を管理するフラグ
-
+    private bool soldier = false;
     Image fadeImage;                //透明度を変更するパネルのイメージ
 
     public GameObject Hiougi;
@@ -23,6 +23,14 @@ public class FadeController : MonoBehaviour
         green = fadeImage.color.g;
         blue = fadeImage.color.b;
         alfa = fadeImage.color.a;
+        if(Character_Flag.GetS_Flag() == 1)
+        {
+            soldier = true;
+        }
+        else
+        {
+            soldier = false;
+        }
     }
 
     void Update()
@@ -57,8 +65,13 @@ public class FadeController : MonoBehaviour
         if (alfa >= 1)
         {             // d)完全に不透明になったら処理を抜ける
             isFadeOut = false;
-            Instantiate(Hiougi);
-            Soldier.Redy();
+           
+            if (soldier)
+            {
+                Instantiate(Hiougi);
+                Soldier.Redy();
+            }
+            
         }
     }
 

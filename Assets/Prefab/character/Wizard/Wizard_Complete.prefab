@@ -382,6 +382,7 @@ MonoBehaviour:
   flap2: 500
   wait: 4
   attack: {fileID: 1694715170737652, guid: 6c1f42f72fcb2d142b677cda0e14d476, type: 2}
+  hiougi: {fileID: 1848717613695186, guid: be4432ac9335e4647a42f0f4f51f7d9c, type: 2}
   Player_Sound: {fileID: 1531667101019472}
 --- !u!114 &114078180415284076
 MonoBehaviour:
@@ -726,7 +727,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 545edd72e307d3c4fb43113730add1dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1

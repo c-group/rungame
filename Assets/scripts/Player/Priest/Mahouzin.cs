@@ -9,6 +9,8 @@ public class Mahouzin : MonoBehaviour {
     private int i = 0;
     Animator anim;
     AnimatorStateInfo animatorStateInfo;
+    public bool priest;
+    public bool wizard;
 
     // Use this for initialization
     void Start() {
@@ -33,7 +35,14 @@ public class Mahouzin : MonoBehaviour {
 
     private void Redy()
     {
-        Priest.Redy();
+        if (priest)
+        {
+            Priest.Redy();
+        }
+        else if (wizard)
+        {
+            Wizard.Redy();
+        }        
     }
 
 }

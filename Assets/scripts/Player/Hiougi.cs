@@ -12,9 +12,9 @@ public class Hiougi : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        if (ikazuti) {
+        /*if (ikazuti) {
             FindObjectOfType<PausManager>().OnClickReStart();
-        }        
+        }        */
         anim = GetComponent("Animator") as Animator;
         anim.Update(0);
         animatorStateInfo = anim.GetCurrentAnimatorStateInfo(0);
@@ -26,6 +26,7 @@ public class Hiougi : MonoBehaviour {
         {
             if (ikazuti)
             {
+                FindObjectOfType<PausManager>().OnClickReStart();
                 Destroy(gameObject);
             }
             else if(rengeki){

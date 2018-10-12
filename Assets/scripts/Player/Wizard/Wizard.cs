@@ -14,6 +14,7 @@ public class Wizard : MonoBehaviour {
     private new Renderer renderer;
     public static int jumpCount = 0;
     public GameObject attack;
+    public GameObject hiougi;
     public GameObject Player_Sound;
     PlayerSound script;
     private int life;
@@ -152,6 +153,7 @@ public class Wizard : MonoBehaviour {
     {
         FindObjectOfType<PausManager>().OnClickPaus();
         anim.SetBool("Hiougi", true);
+        Instantiate(hiougi);
         script.HiougiSound();
         FindObjectOfType<FadeController>().Set_Out();
     }
