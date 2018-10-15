@@ -9,6 +9,26 @@ public class Character_Flag : MonoBehaviour {
     public static int Priest = 0;
     public static int Wizard = 0;
 
+    public bool soldier;
+    public bool priest;
+    public bool wizard;
+
+    private void Start()
+    {
+        if (soldier)
+        {
+            SoldierFlag();
+        }
+        else if (priest)
+        {
+            PriestFlag();
+        }
+        else if (wizard)
+        {
+            WizardFlag();
+        }
+    }
+
     public void SoldierFlag()
     {
         Soldier++;

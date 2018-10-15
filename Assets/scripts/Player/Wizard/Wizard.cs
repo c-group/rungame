@@ -148,6 +148,12 @@ public class Wizard : MonoBehaviour {
         anim.SetBool("Jump", false);
     }
 
+    //アニメーターのFinishトリガーをonにする
+    public void Finish()
+    {
+        anim.SetTrigger("Finish");
+    }
+
     //必殺技処理
     public void OnClickHiougi()
     {
@@ -159,7 +165,7 @@ public class Wizard : MonoBehaviour {
     }
 
     //アニメーターのHiougiステートをfalseにする
-    public static void Redy()
+    public void Redy()
     {
         anim.SetBool("Hiougi", false);
     }

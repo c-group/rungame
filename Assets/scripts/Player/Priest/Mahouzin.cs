@@ -23,12 +23,11 @@ public class Mahouzin : MonoBehaviour {
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("End"))
         {
-            
             while( i < 1)
             {
                 i++;
                 Instantiate(ikazuti);
-                Destroy(gameObject, lifeTime);
+                Destroy(gameObject);
             }
         }        
     }
@@ -37,11 +36,11 @@ public class Mahouzin : MonoBehaviour {
     {
         if (priest)
         {
-            Priest.Redy();
+            FindObjectOfType<Priest>().Redy();
         }
         else if (wizard)
         {
-            Wizard.Redy();
+            FindObjectOfType<Wizard>().Redy();
         }        
     }
 

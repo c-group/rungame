@@ -151,17 +151,25 @@ public class Priest : MonoBehaviour
         anim.SetBool("Jump", false);
     }
 
+    //アニメーターのFinishトリガーをonにする
+    public void Finish()
+    {
+        anim.SetTrigger("Finish");
+    }
+
     //必殺技処理
     public void OnClickHiougi()
     {
+
         FindObjectOfType<PausManager>().OnClickPaus();
         anim.SetBool("Hiougi",true);
         Instantiate(hiougi);
         script.HiougiSound();
+        FindObjectOfType<FadeController>().Set_Out();
     }
 
     //アニメーターのHiougiステートをfalseにする
-    public static void Redy()
+    public void Redy()
     {
         anim.SetBool("Hiougi", false);
     }
