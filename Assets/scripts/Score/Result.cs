@@ -10,6 +10,7 @@ public class Result : MonoBehaviour {
     public Text resultText;
     public Text distanceText;
     public Text totalscoreText;
+    public Text starText;
 
     public Image chara;
     public Image rankimage;
@@ -31,10 +32,12 @@ public class Result : MonoBehaviour {
         int score = Score.getScore();
         int distance = TimeCount.getDis_Score();
         int distancepoint = TimeCount.getDis_Score() * 5;
-        total = score + distancepoint;
-        resultText.text = score.ToString();
-        distanceText.text = distancepoint.ToString();
-        totalscoreText.text = total.ToString();
+        int star = Score.getStar();
+        total = score + distancepoint + (star*100);
+        resultText.text = score.ToString() + ("pt");
+        distanceText.text = distancepoint.ToString() + ("pt");
+        starText.text = star.ToString() + ("×100pt");
+        totalscoreText.text = total.ToString() + ("pt");
         FindObjectOfType<HiScore_Manager>().Save();
 
         if (Character_Flag.GetS_Flag() == 1)

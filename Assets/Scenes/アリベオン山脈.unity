@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ce62ec89480384fa3912538a2b6348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soldier: 1
+  soldier: 0
   priest: 0
   wizard: 0
 --- !u!4 &409264546
