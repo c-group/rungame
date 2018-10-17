@@ -457,7 +457,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: be81ac99f4170894d8fb4e9488569017, type: 2}
+  - {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1610,7 +1610,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: be81ac99f4170894d8fb4e9488569017, type: 2}
+  - {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2226,7 +2226,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: be81ac99f4170894d8fb4e9488569017, type: 2}
+  - {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2577,7 +2577,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: be81ac99f4170894d8fb4e9488569017, type: 2}
+  - {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3025,7 +3025,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: be81ac99f4170894d8fb4e9488569017, type: 2}
+  - {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6882,6 +6882,71 @@ Prefab:
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 23297976528596402, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c37bd698b98f77a429219f60008e1124, type: 2}
+    - target: {fileID: 23842319960283036, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23439414406381600, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23795371180917942, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23173198548176368, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23422070970228268, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23218175743270930, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23664719393910682, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23962362637378960, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23922244430059702, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23222674849568646, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23897901795953512, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
+    - target: {fileID: 23534656480351722, guid: 74ce43719b390ed4f98a87ac7e2ca78b,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74ce43719b390ed4f98a87ac7e2ca78b, type: 2}
   m_IsPrefabAsset: 0
@@ -7201,7 +7266,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: be81ac99f4170894d8fb4e9488569017, type: 2}
+  - {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7378,7 +7443,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: be81ac99f4170894d8fb4e9488569017, type: 2}
+  - {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9092,7 +9157,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: be81ac99f4170894d8fb4e9488569017, type: 2}
+  - {fileID: 2100000, guid: da5f3acd24dbd624b9ad66e4b2184843, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
