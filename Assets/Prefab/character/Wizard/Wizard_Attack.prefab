@@ -130,13 +130,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e9c07cd8b18c2da489d0ded3cd0fc1b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -246,7 +246,7 @@ MonoBehaviour:
   speed: 20
   r_fors: 30
   u_fors: 30
-  power: 1
+  power: 2
   lifeTime: 2
 --- !u!212 &212431435708604520
 SpriteRenderer:

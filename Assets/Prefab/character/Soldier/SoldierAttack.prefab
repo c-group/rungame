@@ -248,7 +248,7 @@ MonoBehaviour:
   speed: 10
   r_fors: 60
   u_fors: 50
-  power: 2
+  power: 3
   lifeTime: 0.8
 --- !u!212 &212694651685132918
 SpriteRenderer:
