@@ -28,6 +28,11 @@ public class EnemySound : MonoBehaviour
             audioSource.PlayOneShot(audioClip[1]);
         }
 
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack"))
+        {
+            audioSource.PlayOneShot(audioClip[2]);
+        }
+
 
     }
 }
