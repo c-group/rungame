@@ -34,13 +34,18 @@ public class Score : MonoBehaviour
     {
         // スコアを0に戻す
         score = 0;
-        star = 0;
+        star = 20;
     }
 
     // ポイントの追加
     public void AddPoint(int point)
     {
         score = score + point;
+    }
+
+    public void AddPoint2(int point)
+    {
+        score = score + point*2;
     }
 
     public void AddStar()

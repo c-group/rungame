@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212972920062992450}
   - component: {fileID: 114642616375400748}
   - component: {fileID: 61836175810933104}
-  - component: {fileID: 114846348142419030}
   - component: {fileID: 50877008041609778}
+  - component: {fileID: 114766988355285114}
   m_Layer: 16
   m_Name: Heart
   m_TagString: life
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scroll: -0.5
---- !u!114 &114846348142419030
+--- !u!114 &114766988355285114
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,9 +109,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1906767511938976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b297ec77f76a34048a491930474038bd, type: 3}
+  m_Script: {fileID: 11500000, guid: a00a03352825fcb4896c48e695eecaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heart: 1
+  score: 0
 --- !u!212 &212972920062992450
 SpriteRenderer:
   m_ObjectHideFlags: 1

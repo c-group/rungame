@@ -17,10 +17,14 @@ public class ObjectCreater : MonoBehaviour
     /// <summary>
     /// 待ち時間
     /// </summary>
-    private float waitingTime = 10f;
+    public float waitingTime;
     /// <summary>
     /// 初期化
     /// </summary>
+    /// 
+    public int x;
+    public int y;
+
     void Awake()
     {
         // InvokeRepeating("関数名",初回呼出までの遅延秒数,次回呼出までの遅延秒数)
@@ -32,6 +36,6 @@ public class ObjectCreater : MonoBehaviour
     void Create()
     {
         // インスタンス生成
-        Instantiate(prefab, new Vector3(170,70,-2), Quaternion.identity);
+        Instantiate(prefab, new Vector3(x,y,-2), Quaternion.identity);
     }
 }

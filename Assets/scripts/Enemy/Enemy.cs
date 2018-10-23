@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public int hp = 1;
     // スコアのポイント
     public int point = 100;
-
+    
     Rigidbody2D rb2d;
     Animator anim;
     public GameObject[] star;
@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
         Vector3 enemypos = this.GetComponent<Transform>().position;
         float dis = Vector3.Distance(playerpos, enemypos);
         //Debug.Log(dis);
-        if (dis < 10)
+        if (dis < 20)
         {
             anim.SetBool("Attack", true);
         }
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
         {
             anim.SetBool("Attack", false);
         }
-
+        
     }
 
     //被ダメージ処理
@@ -87,7 +87,15 @@ public class Enemy : MonoBehaviour
             Instantiate(star[number], transform.position, transform.rotation);
             gameObject.layer = 13;
             // スコアコンポーネントを取得してポイントを追加
-            FindObjectOfType<Score>().AddPoint(point);
+            if (FindObjectOfType<Score_Counter>().GetItem())
+            {
+                FindObjectOfType<Score>().AddPoint(point*2);
+            }
+            else
+            {
+                FindObjectOfType<Score>().AddPoint(point);
+            }
+           
             while (count > 0)
             {
                 //透明にする
