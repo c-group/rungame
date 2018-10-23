@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4039216, g: 0.14901961, b: 0.023529414, a: 1}
+  m_Color: {r: 0.990566, g: 0.9749108, b: 0.9672036, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -673,7 +673,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0797371f9e0e64a419af1b461fbeb3c5, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bfef12c1a043734b8711184bbbebeb5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af99f2f0e616c06488e7a7e93b1fdd1c, type: 2}
   m_IsPrefabAsset: 0
@@ -3465,7 +3465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4056604, g: 0.1473896, b: 0.024875412, a: 1}
+  m_Color: {r: 0.9811321, g: 0.96562594, b: 0.9579922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4971,7 +4971,7 @@ Prefab:
     - target: {fileID: 224419439852206828, guid: 8400c05b5785e7841b9a758f4d409643,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224419439852206828, guid: 8400c05b5785e7841b9a758f4d409643,
         type: 2}
@@ -5022,7 +5022,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b0a803891b7588940b4d8f486c63a1ed, type: 2}
+      objectReference: {fileID: 2100000, guid: 45fb70d66849b4144b2c167674b79c4b, type: 2}
     - target: {fileID: 224419439852206828, guid: 8400c05b5785e7841b9a758f4d409643,
         type: 2}
       propertyPath: m_LocalScale.x
@@ -6170,7 +6170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38679248, g: 0.08575116, b: 0.08575116, a: 1}
+  m_Color: {r: 0.9811321, g: 0.96724814, b: 0.96724814, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
