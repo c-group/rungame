@@ -14,7 +14,8 @@ public class Enemy : MonoBehaviour
     Rigidbody2D rb2d;
     Animator anim;
     public GameObject[] star;
-    GameObject player; 
+    GameObject player;
+    private Vector3 playerpos;
 
     // Updateの前に1回だけ呼ばれるメソッド
     void Start()
@@ -23,6 +24,7 @@ public class Enemy : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
         player = GameObject.FindGameObjectWithTag("Player");
+        playerpos = player.transform.position;
     }
 
     // シーン中にフレーム毎に呼ばれるメソッド
@@ -31,10 +33,8 @@ public class Enemy : MonoBehaviour
         this.transform.position += new Vector3(scroll, 0, 0);
 
         //プレイヤーと敵の距離
-        Vector3 playerpos = player.transform.position;
         Vector3 enemypos = this.GetComponent<Transform>().position;
         float dis = Vector3.Distance(playerpos, enemypos);
-        //Debug.Log(dis);
         if (dis < 20)
         {
             anim.SetBool("Attack", true);
