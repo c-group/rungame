@@ -36,6 +36,6 @@ public class ObjectCreater : MonoBehaviour
     void Create()
     {
         // インスタンス生成
-        Instantiate(prefab, new Vector3(x,y,-2), Quaternion.identity);
+        Instantiate(prefab, new Vector3(x,y,2), Quaternion.identity);
     }
 }

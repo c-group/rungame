@@ -77,9 +77,9 @@ public class HiScore_Manager : MonoBehaviour {
             chara = 2;
         }
 
-        scoreArray = PlayerPrefsX.GetIntArray("score", 0, 10);
+        scoreArray = PlayerPrefsX.GetIntArray("score", 1000, 10);
         charaArray = PlayerPrefsX.GetIntArray("chara", 0, 10);
-        stageArray = PlayerPrefsX.GetStringArray("stage", "nul", 10);
+        stageArray = PlayerPrefsX.GetStringArray("stage", "アリベオン山脈", 10);
         scoreArray = PlayerPrefsX.GetIntArray("star", 0,10);
         rankArray = PlayerPrefsX.GetIntArray("rank", 0, 10);
 

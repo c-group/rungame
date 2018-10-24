@@ -93,7 +93,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!60 &60661073662077184
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -225,7 +225,7 @@ Animator:
   m_GameObject: {fileID: 1606979654307266}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c5ad207fd7c65b741a4a61b030526471, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2cc3ed3500258a74584f5c57e2ef82bf, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb26114e8bb867479b48b826102124b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   r_fors: 60
   u_fors: 50
   power: 3

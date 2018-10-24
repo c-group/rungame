@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class HiougiButton : UIBehaviour
 {
     private int star;
+    public GameObject fire;
+    private int i = 0;
 
     protected override void Start()
     {
@@ -19,18 +21,32 @@ public class HiougiButton : UIBehaviour
     void Update()
     {
         star = Score.getStar();
-        if (star < 20)
+        GameObject obj = GameObject.Find("firering(Clone)");
+        if (star < 15)
         {
             GetComponent<Button>().interactable = false;
+            Destroy(obj);
+            i = 0;
         }
         else
         {
             GetComponent<Button>().interactable = true;
+            firering();
         }
     }
 
     void OnClick()
     {
         FindObjectOfType<Score>().setStar();
+    }
+
+    void firering()
+    {
+        while (i < 1)
+        {
+            Instantiate(fire);
+            i++;
+        }
+        
     }
 }

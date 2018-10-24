@@ -65,6 +65,6 @@ public class Score : MonoBehaviour
 
     public void setStar()
     {
-        star -= 20;
+        star -= 15;
     }
 }
