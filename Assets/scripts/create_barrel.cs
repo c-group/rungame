@@ -13,7 +13,7 @@ public class create_barrel : MonoBehaviour
     /// <summary>
     /// プレハブ
     /// </summary>
-    private GameObject prefab;
+    public GameObject[] Train;
     /// <summary>
     /// 待ち時間
     /// </summary>
@@ -24,7 +24,11 @@ public class create_barrel : MonoBehaviour
     /// 
     public int x;
     public int y;
-    
+    public int rx;
+    public int ry;
+    public int rz;
+
+
 
     void Awake()
     {
@@ -37,6 +41,6 @@ public class create_barrel : MonoBehaviour
     void Create()
     {
         // インスタンス生成
-        Instantiate(prefab, new Vector3(x, y, 2), Quaternion.Euler(-71, -76, 72));
+        Instantiate(Train[Random.Range(0, Train.Length)], new Vector3(x, y, 2), Quaternion.Euler(rx, ry, rz));
     }
 }
