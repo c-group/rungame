@@ -31,7 +31,7 @@ public class Yari : MonoBehaviour
     void Force()
     {
         while(i < 1){
-            this.transform.position += new Vector3(0, 5, 0);
+            this.transform.position += new Vector3(0, 10, 0);
             i++;
         }
         
