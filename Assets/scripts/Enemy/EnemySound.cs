@@ -9,6 +9,8 @@ public class EnemySound : MonoBehaviour
 
     Animator anim;
 
+    public float volume;
+
     void Start()
     {
         anim = GetComponent("Animator") as Animator;
@@ -21,16 +23,19 @@ public class EnemySound : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("damage"))
         {
             audioSource.PlayOneShot(audioClip[0]);
+            audioSource.volume = volume;
         }
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("down"))
         {
             audioSource.PlayOneShot(audioClip[1]);
+            audioSource.volume = 1f;
         }
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("attack"))
         {
             audioSource.PlayOneShot(audioClip[2]);
+            audioSource.volume = volume;
         }
 
 

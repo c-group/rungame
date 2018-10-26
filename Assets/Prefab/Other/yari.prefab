@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 30
+  audioClip:
+  - {fileID: 8300000, guid: 6c427e3d9fca3d84c9c7dac90d5ebf2e, type: 3}
 --- !u!212 &212416179359614524
 SpriteRenderer:
   m_ObjectHideFlags: 1

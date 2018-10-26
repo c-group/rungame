@@ -9,11 +9,15 @@ public class Yari : MonoBehaviour
     public float distance;
     private int i = 0;
     private Vector3 playerpos;
+    AudioSource audioSource;
+    public List<AudioClip> audioClip = new List<AudioClip>();
+
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerpos = player.transform.position;
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +35,7 @@ public class Yari : MonoBehaviour
     void Force()
     {
         while(i < 1){
+            audioSource.PlayOneShot(audioClip[0]);
             this.transform.position += new Vector3(0, 10, 0);
             i++;
         }
