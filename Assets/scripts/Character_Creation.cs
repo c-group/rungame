@@ -8,6 +8,8 @@ public class Character_Creation : MonoBehaviour {
     public GameObject Priest;
     public GameObject Wizard;
 
+    public bool robel = false;
+
     // Use this for initialization
     void Start()
     {
@@ -23,6 +25,7 @@ public class Character_Creation : MonoBehaviour {
         {
             Instantiate(Wizard);
         }
+        
     }
 
 

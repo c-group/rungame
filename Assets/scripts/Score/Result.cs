@@ -28,7 +28,7 @@ public class Result : MonoBehaviour {
 
     // Use this for initialization
     void Start()
-    {
+    {        
         int score = Score.getScore();
         int distance = TimeCount.getDis_Score();
         int distancepoint = TimeCount.getDis_Score() * 5;
@@ -76,4 +76,5 @@ public class Result : MonoBehaviour {
     {
         return total;
     }
+        
 }

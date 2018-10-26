@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HiScore_Manager : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class HiScore_Manager : MonoBehaviour {
     string[] stageArray = new string[10];
 
     static List<ScoreRank> sr = new List<ScoreRank>();
-
+    
     //更新スコア
     private int rankin_score;
 
@@ -42,7 +43,7 @@ public class HiScore_Manager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        //PlayerPrefs.DeleteAll();
         if (Stage_Flag.GetAlibeon() == 1)
         {
             stagename = "アリベオン山脈";
@@ -105,6 +106,7 @@ public class HiScore_Manager : MonoBehaviour {
         
         if (Result.getTotal() > scoreArray[9])
         {
+            FindObjectOfType<Rankin>().rankin();
             charaArray[9] = chara;
             scoreArray[9] = Result.getTotal();
             stageArray[9] = stagename;

@@ -5620,6 +5620,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114110352607776862, guid: daf0a519f3ec705429a7c3f2acc5f4c3,
+        type: 2}
+      propertyPath: robel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daf0a519f3ec705429a7c3f2acc5f4c3, type: 2}
   m_IsPrefabAsset: 0
