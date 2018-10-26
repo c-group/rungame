@@ -15,14 +15,17 @@ public class Yari : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerpos = player.transform.position;
+       // player = GameObject.FindGameObjectWithTag("Player");
+        //playerpos = player.transform.position;
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerpos = player.transform.position;
         Vector3 enemypos = this.GetComponent<Transform>().position;
         float dis = Vector3.Distance(playerpos, enemypos);
 

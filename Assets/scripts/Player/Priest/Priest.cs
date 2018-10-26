@@ -27,11 +27,14 @@ public class Priest : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent("Animator") as Animator;
         script = Player_Sound.GetComponent<PlayerSound>();
+        anim.Update(0);
+        animatorStateInfo = anim.GetCurrentAnimatorStateInfo(0);
 
     }
 
     private void Update()
     {
+
         //スペースキーでジャンプ処理へ
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -47,6 +50,11 @@ public class Priest : MonoBehaviour
         {
             OnClickHiougi();
         }
+
+        if (anim.GetBool("Finish"))
+        {
+            anim.SetBool("Finish", false);
+        }
         //残りライフ数の取得
         life = FindObjectOfType<Playlife>().getLife();
     }
@@ -54,9 +62,6 @@ public class Priest : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        anim.Update(0);
-        animatorStateInfo = anim.GetCurrentAnimatorStateInfo(0);
-
         //ジャンプカウント
         if (collision.gameObject.tag == "Ground")
         {
@@ -154,7 +159,7 @@ public class Priest : MonoBehaviour
     //アニメーターのFinishトリガーをonにする
     public void Finish()
     {
-        anim.SetTrigger("Finish");
+        anim.SetBool("Finish",true);
     }
 
     //必殺技処理
