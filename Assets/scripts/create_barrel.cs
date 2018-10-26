@@ -41,6 +41,6 @@ public class create_barrel : MonoBehaviour
     void Create()
     {
         // インスタンス生成
-        Instantiate(Train[Random.Range(0, Train.Length)], new Vector3(x, y, 2), Quaternion.Euler(rx, ry, rz));
+        Instantiate(Train[Random.Range(0, Train.Length)], new Vector3(x, y, 8), Quaternion.Euler(rx, ry, rz));
     }
 }
