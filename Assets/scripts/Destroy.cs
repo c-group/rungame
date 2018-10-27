@@ -6,11 +6,14 @@ public class Destroy : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        //衝突判定
-      
         {
            
             Destroy(this.gameObject);
         }
+    }
+
+    public void Des()
+    {
+        Destroy(this.gameObject);
     }
 }

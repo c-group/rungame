@@ -25,10 +25,20 @@ public class ObjectCreater : MonoBehaviour
     public int x;
     public int y;
 
+    public bool Bom;
+
     void Awake()
     {
         // InvokeRepeating("関数名",初回呼出までの遅延秒数,次回呼出までの遅延秒数)
-        InvokeRepeating("Create", waitingTime, waitingTime);
+        if (Bom)
+        {
+            InvokeRepeating("Create", waitingTime, Random.Range(40f, 70f));
+        }
+        else
+        {
+            InvokeRepeating("Create", waitingTime, Random.Range(5f,10f));
+        }
+        
     }
     /// <summary>
     /// オブジェクトの生成

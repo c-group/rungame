@@ -28,12 +28,10 @@ public class create_barrel : MonoBehaviour
     public int ry;
     public int rz;
 
-
-
     void Awake()
     {
         // InvokeRepeating("関数名",初回呼出までの遅延秒数,次回呼出までの遅延秒数)
-        InvokeRepeating("Create", waitingTime, waitingTime);
+        InvokeRepeating("Create", waitingTime, Random.Range(15f,30f));
     }
     /// <summary>
     /// オブジェクトの生成

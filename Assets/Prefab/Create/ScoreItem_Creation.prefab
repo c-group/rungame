@@ -52,4 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heart: {fileID: 1188055361813380, guid: a3d767605605ba74ab8abe72aeffb6e7, type: 2}
-  timeOut: 90
+  timeOut: 50
+  score: 1

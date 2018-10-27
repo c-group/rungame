@@ -27,11 +27,11 @@ public class Score_Counter : MonoBehaviour {
         {
             time += Time.deltaTime;
             if (time >= 20)
-            {
-                score_item = false;
+            {               
                 GameObject.Find("Item_Bgm").GetComponent<AudioSource>().enabled = false;
                 GameObject.Find("bgm").GetComponent<AudioSource>().enabled = true;
-                Destroy(gameObject);
+                time = 0;
+                score_item = false;
             }
         }
     }

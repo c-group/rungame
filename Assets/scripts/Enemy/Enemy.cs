@@ -5,7 +5,6 @@ public class Enemy : MonoBehaviour
 {
 
     // 変数の定義と初期化
-    public float flap = 550f;
     public float scroll = -0.5f;
     public int hp = 1;
     // スコアのポイント
@@ -42,27 +41,29 @@ public class Enemy : MonoBehaviour
         else
         {
             anim.SetBool("Attack", false);
-        }
-        
+        }        
     }
 
     //被ダメージ処理
     void OnCollisionEnter2D(Collision2D collision){
-
-        if (collision.gameObject.tag == "Hiougi")
-        {
-            StartCoroutine("Deth_2");
-        }
-
+    
         if (hp > 0)
         {
             if (collision.gameObject.tag == "Attack")
             {
                 StartCoroutine("Deth");
             }
-
         }
-        
+
+        if (collision.gameObject.tag == "Hiougi")
+        {
+            StartCoroutine("Deth_2");
+        }
+
+        if (collision.gameObject.tag == "Bom")
+        {
+            StartCoroutine("Deth_3");
+        }
 
         if (collision.gameObject.tag == "Ground")
         {
@@ -124,11 +125,9 @@ public class Enemy : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
                 count--;
             }
-        }
+        }                
+     }
 
-        
-
-        }
     IEnumerator Deth_2()
     {
         int count = 5;
@@ -138,6 +137,30 @@ public class Enemy : MonoBehaviour
         gameObject.layer = 13;
         // スコアコンポーネントを取得してポイントを追加
         FindObjectOfType<Score>().AddPoint(point*3);
+        while (count > 0)
+        {
+            //透明にする
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+            //0.05秒待つ
+            yield return new WaitForSeconds(0.05f);
+            //元に戻す
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+            //0.05秒待つ
+            yield return new WaitForSeconds(0.05f);
+            count--;
+        }
+        Destroy(gameObject);
+    }
+
+    IEnumerator Deth_3()
+    {
+        int count = 5;
+        anim.SetBool("Down", true);
+        int number = Random.Range(0, star.Length);
+        Instantiate(star[number], transform.position, transform.rotation);
+        gameObject.layer = 13;
+        // スコアコンポーネントを取得してポイントを追加
+        FindObjectOfType<Score>().AddPoint(point);
         while (count > 0)
         {
             //透明にする

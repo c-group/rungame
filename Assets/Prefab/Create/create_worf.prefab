@@ -53,5 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1605084162590446, guid: e0a84abb2aa2fe549a1575158d2ef062, type: 2}
   waitingTime: 6
-  x: 150
+  x: 130
   y: 70
+  Bom: 0

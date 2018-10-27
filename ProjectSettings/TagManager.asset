@@ -12,6 +12,7 @@ TagManager:
   - Star
   - Hiougi
   - Item
+  - Bom
   layers:
   - Default
   - TransparentFX
