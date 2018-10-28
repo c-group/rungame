@@ -9,7 +9,9 @@ public class Enemy : MonoBehaviour
     public int hp = 1;
     // スコアのポイント
     public int point = 100;
-    
+
+    private int attackcount = 0;
+
     Rigidbody2D rb2d;
     Animator anim;
     public GameObject[] star;
@@ -34,19 +36,25 @@ public class Enemy : MonoBehaviour
         //プレイヤーと敵の距離
         Vector3 enemypos = this.GetComponent<Transform>().position;
         float dis = Vector3.Distance(playerpos, enemypos);
-        if (dis < 20)
+        if (dis < 15)
         {
-            anim.SetBool("Attack", true);
+            if (attackcount == 0)
+            {
+                anim.SetBool("Attack", true);
+                attackcount++;
+            }
+
         }
         else
         {
             anim.SetBool("Attack", false);
-        }        
+        }
     }
 
     //被ダメージ処理
-    void OnCollisionEnter2D(Collision2D collision){
-    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
         if (hp > 0)
         {
             if (collision.gameObject.tag == "Attack")
@@ -67,10 +75,10 @@ public class Enemy : MonoBehaviour
 
         if (collision.gameObject.tag == "Ground")
         {
-            rb2d.velocity = Vector2.zero; 
+            rb2d.velocity = Vector2.zero;
         }
     }
-    
+
     IEnumerator Deth()
     {
         int count = 5;
@@ -80,7 +88,7 @@ public class Enemy : MonoBehaviour
         Attack power = attack.GetComponent<Attack>();
 
         hp = hp - power.power;
-        
+
         if (hp <= 0)
         {
             anim.SetBool("Down", true);
@@ -90,13 +98,13 @@ public class Enemy : MonoBehaviour
             // スコアコンポーネントを取得してポイントを追加
             if (FindObjectOfType<Score_Counter>().GetItem())
             {
-                FindObjectOfType<Score>().AddPoint(point*2);
+                FindObjectOfType<Score>().AddPoint(point * 2);
             }
             else
             {
                 FindObjectOfType<Score>().AddPoint(point);
             }
-           
+
             while (count > 0)
             {
                 //透明にする
@@ -125,8 +133,8 @@ public class Enemy : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
                 count--;
             }
-        }                
-     }
+        }
+    }
 
     IEnumerator Deth_2()
     {
@@ -136,7 +144,7 @@ public class Enemy : MonoBehaviour
         Instantiate(star[number], transform.position, transform.rotation);
         gameObject.layer = 13;
         // スコアコンポーネントを取得してポイントを追加
-        FindObjectOfType<Score>().AddPoint(point*3);
+        FindObjectOfType<Score>().AddPoint(point * 3);
         while (count > 0)
         {
             //透明にする

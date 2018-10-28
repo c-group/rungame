@@ -19,6 +19,7 @@ public class Priest : MonoBehaviour
     public GameObject Player_Sound;
     PlayerSound script;
     private int life;
+    private Vector3 player;
 
     // Updateの前に1回だけ呼ばれるメソッド
     void Start()
@@ -33,8 +34,7 @@ public class Priest : MonoBehaviour
     }
 
     private void Update()
-    {
-
+    {        
         //スペースキーでジャンプ処理へ
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -59,6 +59,18 @@ public class Priest : MonoBehaviour
         life = FindObjectOfType<Playlife>().getLife();
     }
 
+    private void FixedUpdate()
+    {
+        player = this.GetComponent<Transform>().position;
+
+        if (jumpCount > 0)
+        {
+            if(player.x < -29f)
+            {
+                this.transform.position += new Vector3(0.1f, 0, 0);
+            }
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -159,7 +171,7 @@ public class Priest : MonoBehaviour
     //アニメーターのFinishトリガーをonにする
     public void Finish()
     {
-        anim.SetBool("Finish",true);
+        anim.SetBool("Finish", true);
     }
 
     //必殺技処理
@@ -167,7 +179,7 @@ public class Priest : MonoBehaviour
     {
 
         FindObjectOfType<PausManager>().OnClickPaus();
-        anim.SetBool("Hiougi",true);
+        anim.SetBool("Hiougi", true);
         Instantiate(hiougi);
         script.HiougiSound();
         FindObjectOfType<FadeController>().Set_Out();

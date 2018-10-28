@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class Rankin : MonoBehaviour {
     
-    Text rankinText;
+    Image rankinImage;
 
     // Use this for initialization
     void Start () {
-        rankinText = GetComponent<Text>();
-        rankinText.enabled = false;
+        rankinImage = GetComponent<Image>();
+        rankinImage.enabled = false;
     }
 
     public void rankin()
     {
-        rankinText.enabled = true;
+        rankinImage.enabled = true;
     }
 
 }

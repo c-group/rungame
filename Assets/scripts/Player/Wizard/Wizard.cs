@@ -19,6 +19,7 @@ public class Wizard : MonoBehaviour {
     public GameObject Player_Sound;
     PlayerSound script;
     private int life;
+    private Vector3 player;
 
     // Updateの前に1回だけ呼ばれるメソッド
     void Start()
@@ -56,6 +57,19 @@ public class Wizard : MonoBehaviour {
 
         //残りライフ数の取得
         life = FindObjectOfType<Playlife>().getLife();
+    }
+
+    private void FixedUpdate()
+    {
+        player = this.GetComponent<Transform>().position;
+
+        if (jumpCount > 0)
+        {
+            if (player.x < -29f)
+            {
+                this.transform.position += new Vector3(0.1f, 0, 0);
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
