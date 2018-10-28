@@ -82,11 +82,19 @@ public class Soldier : MonoBehaviour
             anim.SetTrigger("Damage");
             StartCoroutine("Damage");
         }
+
         //星取得
         if (collision.gameObject.tag == "Star")
         {
             script.StarSound();
             FindObjectOfType<Score>().AddStar();
+        }
+
+        if (collision.gameObject.tag == "Item")
+        {
+            FindObjectOfType<Score_Counter>().SetItem();
+            GameObject.Find("bgm").GetComponent<AudioSource>().enabled = false;
+            GameObject.Find("Item_Bgm").GetComponent<AudioSource>().enabled = true;
         }
     }
 

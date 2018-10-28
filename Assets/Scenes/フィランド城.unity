@@ -460,6 +460,7 @@ MonoBehaviour:
   x: 130
   y: 70
   Bom: 1
+  Ice_Needle: 0
 --- !u!4 &87839415
 Transform:
   m_ObjectHideFlags: 0

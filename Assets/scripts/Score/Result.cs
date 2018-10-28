@@ -31,11 +31,11 @@ public class Result : MonoBehaviour {
     {        
         int score = Score.getScore();
         int distance = TimeCount.getDis_Score();
-        int distancepoint = TimeCount.getDis_Score() * 5;
+        int distancepoint = TimeCount.getDis_Score() * 10;
         int star = Score.getStar();
         total = score + distancepoint + (star*100);
         resultText.text = score.ToString() + ("pt");
-        distanceText.text = distancepoint.ToString() + ("pt");
+        distanceText.text = distance.ToString() + ("×10pt");
         starText.text = star.ToString() + ("×100pt");
         totalscoreText.text = total.ToString() + ("pt");
         FindObjectOfType<HiScore_Manager>().Save();
@@ -53,15 +53,15 @@ public class Result : MonoBehaviour {
             chara.sprite =Wizard;
         }        
 
-        if(total < 5000)
+        if(total < 3000)
         {
             rankimage.sprite = C;
         }
-        else if(total < 10000)
+        else if(total < 5000)
         {
             rankimage.sprite = B;
         }
-        else if (total < 15000)
+        else if (total < 10000)
         {
             rankimage.sprite = A;
         }

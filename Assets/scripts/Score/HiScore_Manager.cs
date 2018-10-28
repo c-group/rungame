@@ -43,7 +43,7 @@ public class HiScore_Manager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //PlayerPrefs.DeleteAll();
+        
         if (Stage_Flag.GetAlibeon() == 1)
         {
             stagename = "アリベオン山脈";
@@ -112,19 +112,19 @@ public class HiScore_Manager : MonoBehaviour {
             stageArray[9] = stagename;
             starArray[9] = Score.getStar();
             
-            if(Result.getTotal() < 5000)
+            if(Result.getTotal() < 3000)
             {
                 rankArray[9] = 0;
             }
-            else if (Result.getTotal() < 10000)
+            else if (Result.getTotal() < 5000)
             {
                 rankArray[9] = 1;
             }
-            else if (Result.getTotal() < 15000)
+            else if (Result.getTotal() < 10000)
             {
                 rankArray[9] = 2;
             }
-            else if (Result.getTotal() < 15000)
+            else
             {
                 rankArray[9] = 3;
             }

@@ -20,9 +20,6 @@ public class Score_Counter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         score = Score.getScore();
-        distancepoint = TimeCount.getDis_Score() * 10;
-        total = score + distancepoint;
-
         if (score_item)
         {
             time += Time.deltaTime;
@@ -34,11 +31,6 @@ public class Score_Counter : MonoBehaviour {
                 score_item = false;
             }
         }
-    }
-
-    public static int GetTotal()
-    {
-        return total;
     }
 
     public void SetItem()

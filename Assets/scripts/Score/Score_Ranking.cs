@@ -46,7 +46,7 @@ public class Score_Ranking : MonoBehaviour {
     }
 
     void Start () {
-
+        //PlayerPrefs.DeleteAll();
         scoreArray = PlayerPrefsX.GetIntArray("score");
         charaArray = PlayerPrefsX.GetIntArray("chara");
         stageArray = PlayerPrefsX.GetStringArray("stage");

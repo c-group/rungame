@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114815972797131816}
   - component: {fileID: 114499569163512502}
   - component: {fileID: 50517130543503404}
-  - component: {fileID: 61938841437961104}
+  - component: {fileID: 58461770875338326}
   m_Layer: 17
   m_Name: Wooden_Barrel
   m_TagString: Enemy
@@ -107,8 +107,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61938841437961104
-BoxCollider2D:
+--- !u!58 &58461770875338326
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -119,19 +119,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000014901161, y: 0.0004413426}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.000000014937289, y: 0.00044137237}
   serializedVersion: 2
-  m_Size: {x: 0.53222597, y: 0.60920805}
-  m_EdgeRadius: 0
+  m_Radius: 0.30460402
 --- !u!114 &114499569163512502
 MonoBehaviour:
   m_ObjectHideFlags: 1

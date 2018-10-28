@@ -30,7 +30,6 @@ public class TimeCount : MonoBehaviour
         
     }
 
-
     public static int getDis_Score()
     {
         return second;

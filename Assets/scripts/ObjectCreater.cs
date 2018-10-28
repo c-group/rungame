@@ -26,13 +26,25 @@ public class ObjectCreater : MonoBehaviour
     public int y;
 
     public bool Bom;
+    public bool Ice_Needle;
 
+    private AudioSource sound01;
+
+    private void Start()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, -45);
+        sound01 = GetComponent<AudioSource>();
+    }
     void Awake()
     {
         // InvokeRepeating("関数名",初回呼出までの遅延秒数,次回呼出までの遅延秒数)
         if (Bom)
         {
             InvokeRepeating("Create", waitingTime, Random.Range(40f, 70f));
+        }
+        else if (Ice_Needle)
+        {
+            InvokeRepeating("Create_I", waitingTime, Random.Range(20f, 40f));
         }
         else
         {
@@ -47,5 +59,12 @@ public class ObjectCreater : MonoBehaviour
     {
         // インスタンス生成
         Instantiate(prefab, new Vector3(x,y,2), Quaternion.identity);
+    }
+
+    void Create_I()
+    {
+        // インスタンス生成
+        Instantiate(prefab, new Vector3(x, y, 2), transform.rotation);
+        sound01.PlayOneShot(sound01.clip);
     }
 }

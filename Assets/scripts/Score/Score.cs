@@ -34,7 +34,7 @@ public class Score : MonoBehaviour
     {
         // スコアを0に戻す
         score = 0;
-        star = 20;
+        star = 0;
     }
 
     // ポイントの追加

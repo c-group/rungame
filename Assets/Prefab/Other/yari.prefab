@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdc283290af6fb4aa30a4c15caae41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 30
+  distance: 40
   audioClip:
   - {fileID: 8300000, guid: 6c427e3d9fca3d84c9c7dac90d5ebf2e, type: 3}
 --- !u!212 &212416179359614524
