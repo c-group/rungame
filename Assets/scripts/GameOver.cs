@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     private AudioSource sound01;
+    private int count = 0;
 
     void Start()
     {
@@ -16,13 +17,16 @@ public class GameOver : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            
-            int life = FindObjectOfType<Playlife>().getLife();
-            if (life > 0)
+            if(count < 1)
             {
-                FadeManager.Instance.LoadScene("Game Over", 1f);
-                sound01.PlayOneShot(sound01.clip);                
-            }
+                int life = FindObjectOfType<Playlife>().getLife();
+                if (life > 0)
+                {
+                    FadeManager.Instance.LoadScene("Game Over", 1f);
+                    sound01.PlayOneShot(sound01.clip);
+                    count++;
+                }
+            }            
         }
     }
 }
