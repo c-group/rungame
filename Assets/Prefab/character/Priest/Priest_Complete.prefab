@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player_Sound: {fileID: 1145121253588438}
-  wait: 1
+  wait: 0.1
 --- !u!114 &114357147426145360
 MonoBehaviour:
   m_ObjectHideFlags: 1

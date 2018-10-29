@@ -81,7 +81,7 @@ public class HiScore_Manager : MonoBehaviour {
         scoreArray = PlayerPrefsX.GetIntArray("score", 1000, 10);
         charaArray = PlayerPrefsX.GetIntArray("chara", 0, 10);
         stageArray = PlayerPrefsX.GetStringArray("stage", "アリベオン山脈", 10);
-        scoreArray = PlayerPrefsX.GetIntArray("star", 0,10);
+        starArray = PlayerPrefsX.GetIntArray("star", 0,10);
         rankArray = PlayerPrefsX.GetIntArray("rank", 0, 10);
 
         for (int i = 0; i < 10; i++)
@@ -129,11 +129,6 @@ public class HiScore_Manager : MonoBehaviour {
                 rankArray[9] = 3;
             }
         }
-        Debug.Log(charaArray[9]);
-        Debug.Log(scoreArray[9]);
-        Debug.Log(stageArray[9]);
-        Debug.Log(starArray[9]);
-        Debug.Log(rankArray[9]);
 
         PlayerPrefsX.SetIntArray("score", scoreArray);
         PlayerPrefsX.SetIntArray("chara", charaArray);
