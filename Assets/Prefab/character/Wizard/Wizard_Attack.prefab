@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
-  r_fors: 60
-  u_fors: 50
+  r_fors: 400
+  u_fors: 400
   power: 2
   lifeTime: 0.8
 --- !u!212 &212431435708604520

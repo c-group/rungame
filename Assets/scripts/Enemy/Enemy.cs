@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public int point = 100;
 
     private int attackcount = 0;
+    private int power;
 
     Rigidbody2D rb2d;
     Animator anim;
@@ -59,6 +60,7 @@ public class Enemy : MonoBehaviour
         {
             if (collision.gameObject.tag == "Attack")
             {
+                power = collision.gameObject.GetComponent<Attack>().Get_Power();
                 StartCoroutine("Deth");
             }
         }
@@ -83,11 +85,8 @@ public class Enemy : MonoBehaviour
     {
         int count = 5;
         anim.SetTrigger("Damage");
-        //プレイヤーの攻撃のオブジェクト，コンポーネントを取得
-        GameObject attack = GameObject.FindGameObjectWithTag("Attack");
-        Attack power = attack.GetComponent<Attack>();
-
-        hp = hp - power.power;
+        
+        hp = hp - power;
 
         if (hp <= 0)
         {

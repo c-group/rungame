@@ -248,6 +248,7 @@ MonoBehaviour:
   u_fors: 80
   power: 5
   lifeTime: 1
+  priest: 1
 --- !u!212 &212996859938635372
 SpriteRenderer:
   m_ObjectHideFlags: 1

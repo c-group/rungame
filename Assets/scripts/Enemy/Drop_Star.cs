@@ -15,14 +15,7 @@ public class Drop_Star : MonoBehaviour {
     private void Update()
     {
         star = this.GetComponent<Transform>().position;
-        playerpos = player.transform.position;
-        if(count > 0)
-        {
-            if (star.x < playerpos.x)
-            {
-                this.transform.position += new Vector3(0.6f, 0, 0);
-            }
-        }        
+        playerpos = player.transform.position;  
     }
 
     void Start()
@@ -43,11 +36,7 @@ public class Drop_Star : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-
-        if (collision.gameObject.tag == "Ground")
-        {
-            count++;
-        }
+        
     }
 
 

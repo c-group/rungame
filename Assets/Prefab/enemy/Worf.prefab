@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0603efea622898a4192e75fb4e0d5219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scroll: -0.8
+  scroll: -0.7
   hp: 5
   point: 100
   star:

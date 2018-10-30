@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flap_u: 450
-  flap_r: 150
+  flap_r: 200
 --- !u!212 &212761953551350622
 SpriteRenderer:
   m_ObjectHideFlags: 1

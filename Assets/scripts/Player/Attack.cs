@@ -12,6 +12,7 @@ public class Attack : MonoBehaviour
 
     // ゲームオブジェクト生成から削除するまでの時間
     public float lifeTime = 1;
+    public bool priest = false;
 
     //斬撃飛ばし
     void Start()
@@ -30,5 +31,15 @@ public class Attack : MonoBehaviour
             rigit.AddForce(transform.root.right * r_fors, ForceMode2D.Impulse);
             rigit.AddForce(transform.root.up * u_fors, ForceMode2D.Impulse);
         }
+
+        if (priest == false)
+        {
+            Destroy(gameObject);
+        }        
+    }
+
+    public int Get_Power()
+    {
+        return power;
     }
 }

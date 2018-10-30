@@ -252,7 +252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u50E7\u4FB6"
 --- !u!222 &11043885
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3962,7 +3962,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u50E7\u4FB6"
 --- !u!222 &698528237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6372,7 +6372,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u9B54\u6CD5"
 --- !u!222 &1092613243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8044,7 +8044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 671, y: 190.99998}
+  m_AnchoredPosition: {x: 590, y: 190.99998}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511253595
@@ -8079,7 +8079,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u9B54\u6CD5"
 --- !u!222 &1511253596
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8680,7 +8680,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u9B54\u6CD5"
 --- !u!222 &1583706537
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9211,7 +9211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u50E7\u4FB6"
 --- !u!222 &1636004872
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9713,7 +9713,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u9B54\u6CD5"
 --- !u!222 &1750940639
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10868,7 +10868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5263\u58EB"
+  m_Text: "\u50E7\u4FB6"
 --- !u!222 &1998080908
 CanvasRenderer:
   m_ObjectHideFlags: 0

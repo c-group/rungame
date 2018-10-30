@@ -3080,7 +3080,7 @@ MonoBehaviour:
   waitingTime: 30
   isFadeOut: 0
   isFadeIn: 0
-  alpha: 0.8
+  alpha: 0.85
 --- !u!1 &626933856
 GameObject:
   m_ObjectHideFlags: 0
@@ -7743,6 +7743,10 @@ Prefab:
       propertyPath: A
       value: 
       objectReference: {fileID: 8300000, guid: c4e71a2c7140dbb4fae0ae21ff93ccd8, type: 3}
+    - target: {fileID: 4885019596083974, guid: d4a385d7420d19344b5bb244966792ec, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4a385d7420d19344b5bb244966792ec, type: 2}
   m_IsPrefabAsset: 0

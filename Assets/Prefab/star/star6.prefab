@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flap_u: 450
-  flap_r: 150
+  flap_r: 200
 --- !u!114 &114835922180191104
 MonoBehaviour:
   m_ObjectHideFlags: 1
