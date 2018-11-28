@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Button))]
-public class score : UIBehaviour
+public class ScoreButton : UIBehaviour
 {
     protected override void Start()
     {

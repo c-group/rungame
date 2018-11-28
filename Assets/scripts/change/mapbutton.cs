@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Button))]
-public class mapbutton : UIBehaviour
+public class MapButton : UIBehaviour
 {
     protected override void Start()
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class destroy1 : MonoBehaviour
+public class Enemy_Destroy : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D col)
     {

@@ -13,13 +13,11 @@ public class StartButton : UIBehaviour
 
         // Buttonクリック時、OnClickメソッドを呼び出す
         GetComponent<Button>().onClick.AddListener(OnClick);
-        
 
         }
 
         void OnClick()
     {
-        FadeManager.Instance.LoadScene("Story", 1.0f);
-       
+        FadeManager.Instance.LoadScene("Story", 1.0f);       
     }
 }

@@ -6,18 +6,18 @@ public class FadeScript : MonoBehaviour
 
     public GameObject obj;
 
-    // Use this for initialization
-    void Start()
-    {
-    }
+    public int y1 = 1500;
+    public int y2 = 600;
+    public float time1 = 1;
+    public float time2 = 2;
+
     public void MoveUp()
-    {
-       
-     iTween.MoveTo(gameObject, iTween.Hash("y", 1500, "time", 1));
+    {       
+     iTween.MoveTo(gameObject, iTween.Hash("y", y1, "time", time1));
     }
+
     public void MoveDown()
     {
-
-        iTween.MoveTo(gameObject, iTween.Hash("y", 600, "time", 2));
+        iTween.MoveTo(gameObject, iTween.Hash("y", y2, "time", time2));
     }
 }

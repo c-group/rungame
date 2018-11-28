@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Button))]
-public class item : UIBehaviour
+public class ItemButton : UIBehaviour
 {
     protected override void Start()
     {

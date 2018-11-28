@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Button))]
-public class tapbutton : UIBehaviour
+public class MenuButton : UIBehaviour
 {
     protected override void Start()
     {
